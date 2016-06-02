@@ -158,6 +158,7 @@
     <Content Include="Src\Styles\7_trumps\_trumps.widths.scss" />
     <Content Include="Src\Styles\styles.scss" />
     <Content Include="Src\Styles\_references.scss" />
+    <Content Include="StyleTemplate\index.html" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -226,8 +227,7 @@
     <Content Include="Dist\assets\scripts\vendor\respond.min.js" />
     <Content Include="Dist\assets\scripts\vendor\tota11y.js" />
     <None Include="Src\Scripts\_references.js" />
-    <Content Include="Src\Styles\editor.css" />
-    <Content Include="Src\Styles\no-js.css" />
+    <Content Include="Dist\assets\styles\no-js.css" />
     <Content Include="Web.config" />
     <Content Include="Dist\index.html" />
   </ItemGroup>
