@@ -147,7 +147,7 @@
     <Content Include="Src\Styles\6_components\_components.cookie-information.scss" />
     <Content Include="Src\Styles\6_components\_components.episerver-forms.scss" />
     <Content Include="Src\Styles\6_components\_components.main-navigation.scss" />
-    <Content Include="Src\Styles\6_components\_components.owl-carousel.scss" />
+    <Content Include="Src\Styles\6_components\_components.flickity-carousel.scss" />
     <Content Include="Src\Styles\6_components\_components.page-footer.scss" />
     <Content Include="Src\Styles\6_components\_components.page-header.scss" />
     <Content Include="Src\Styles\7_trumps\_trumps.clearfix.scss" />
@@ -203,7 +203,6 @@
     <Content Include="Src\Scripts\modules\common.js" />
     <Content Include="Src\Scripts\modules\cookie-alert.js" />
     <Content Include="Src\Scripts\modules\cookies.js" />
-    <Content Include="Src\Scripts\modules\owl-carousel.js" />
     <Content Include="Src\Scripts\modules\polyfills.js" />
     <Content Include="Src\Scripts\modules\print.js" />
     <Content Include="Src\Scripts\modules\responsive-bg-image.js" />
