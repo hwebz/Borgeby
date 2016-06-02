@@ -34,8 +34,8 @@ All vendor JavaScripts should be added through bower. Define the needed packages
 ### TouchSwipe
 [TouchSwipe](https://github.com/mattbryson/TouchSwipe-Jquery-Plugin) is a jQuery plugin that is used for detecting events on touch devices.
 
-### OWL Carousel
-[OWL Carousel](http://owlgraphic.com/owlcarousel) is a jQuery plugin that is used for creating responsive carousel sliders. For the carousel to work, we also need to incorporate some stylesheets from OWL. But instead of including the minified css files directly onto our website, we include the separate scss files from bower in the right section in `styles.scss` to honor ITCSS.
+### Flickity Carousel
+[Flickity Carousel](http://flickity.metafizzy.co/) is a jQuery plugin that is used for creating responsive carousel sliders. The carousel can be styled in `_components.flickity-carousel.scss`.
 
 ### Modernizr
 We use [Modernizr](http://modernizr.com) for feature detection, but not the complete build due to it's large filesize. A gulp task called `modernizr` is available for manual run that scans our javascript files and creates a custom modernizr build file with only the required feature detections. This custom build is then included in our javascript bundle.

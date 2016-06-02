@@ -70,6 +70,8 @@
     <Content Include="Dist\assets\images\sprite.png" />
     <Content Include="Dist\assets\scripts\scripts.js" />
     <Content Include="Dist\assets\scripts\scripts.min.js" />
+    <Content Include="Dist\assets\scripts\vendor\flickity.pkgd.js" />
+    <Content Include="Dist\assets\scripts\vendor\flickity.pkgd.min.js" />
     <Content Include="Dist\assets\styles\styles.css" />
     <Content Include="Dist\assets\styles\styles.min.css" />
     <Content Include="Documentation\Frontend\Styles\Sassdoc\assets\css\main.css" />
@@ -89,8 +91,6 @@
     <Content Include="gulpfile.js" />
     <Content Include="packages.config" />
     <Content Include="bower.json" />
-    <Content Include="Documentation\Backend\Caching\readme.md" />
-    <Content Include="Documentation\Backend\Models\readme.md" />
     <Content Include="Documentation\Frontend\Scripts\readme.md" />
     <Content Include="Documentation\Frontend\Sprites\readme.md" />
     <Content Include="Documentation\Frontend\Styles\readme.md" />
@@ -219,8 +219,6 @@
     <Content Include="Dist\assets\scripts\vendor\jquery.touchSwipe.js" />
     <Content Include="Dist\assets\scripts\vendor\jquery.touchSwipe.min.js" />
     <Content Include="Dist\assets\scripts\vendor\modernizr-custom.js" />
-    <Content Include="Dist\assets\scripts\vendor\owl.carousel.js" />
-    <Content Include="Dist\assets\scripts\vendor\owl.carousel.min.js" />
     <Content Include="Dist\assets\scripts\vendor\picturefill.js" />
     <Content Include="Dist\assets\scripts\vendor\picturefill.min.js" />
     <Content Include="Dist\assets\scripts\vendor\respond.js" />

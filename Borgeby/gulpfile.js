@@ -477,7 +477,6 @@ plugins.gulp.task("scripts", function () {
             paths.scripts.src + "polyfills.js",
             paths.scripts.src + "collapse.js",
             paths.scripts.src + "cookie-alert.js",
-            paths.scripts.src + "owl-carousel.js",
             paths.scripts.src + "print.js",
             paths.scripts.src + "show-more.js",
             paths.scripts.src + "truncate.js",
