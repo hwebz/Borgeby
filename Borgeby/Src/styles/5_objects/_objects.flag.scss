@@ -1,0 +1,421 @@
+/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #FLAG
+//
+// The flag object is a design pattern similar to the media object, however
+// it utilises "display: table[-cell]" to give us control over the vertical
+// alignments of the text and image.
+// http://csswizardry.com/2013/05/the-flag-object
+// ------------------------------------------------------------------------- //
+
+
+
+// Gutter
+$flag-gutter:               $base-spacing-unit;
+$flag-gutter--tiny:         quarter($flag-gutter);
+$flag-gutter--small:        halve($flag-gutter);
+$flag-gutter--large:        double($flag-gutter);
+$flag-gutter--huge:         quadruple($flag-gutter);
+
+
+// Modifiers
+$enable-flag--tiny:         false;
+$enable-flag--small:        false;
+$enable-flag--large:        false;
+$enable-flag--huge:         false;
+$enable-flag--rev:          false;
+$enable-flag--flush:        false;
+$enable-flag--top:          false;
+$enable-flag--bottom:       false;
+$enable-flag--responsive:   false;
+
+
+// Settings
+$flag-collapse-at:          $breakpoint-tablet-start;
+
+
+
+/**
+ * Flag object
+ *
+ * 1. Allows us to control vertical alignments
+ * 2. Force the object to be the full width of its parent. Combined with [1],
+ *    this makes the object behave in a quasi-`display: block;` manner.
+ */
+.flag,
+%flag {
+    display: table; /* [1] */
+    width: 100%; /* [2] */
+}
+
+/**
+ * 1. Default to aligning content to their middles.
+ */
+.flag__img,
+%flag__img,
+.flag__body,
+%flag__body {
+    display: table-cell;
+    vertical-align: middle; /* [1] */
+}
+
+/**
+ * Flag images have a space between them and the body of the object.
+ */
+.flag__img,
+%flag__img {
+    padding-right: $flag-gutter;
+
+    > img {
+        display: block;
+        max-width: none;
+    }
+}
+
+/**
+ * 1. Forces the `.flag__body` to take up all remaining space.
+ */
+.flag__body,
+%flag__body {
+    width: 100%; /* [1] */
+    &,
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
+@if ($enable-flag--tiny == true) {
+    /**
+     * Tiny flags.
+     */
+    .flag--tiny,
+    %flag--tiny {
+
+        > .flag__img,
+        > %flag__img {
+            padding-right: $flag-gutter--tiny;
+        }
+
+        @if ($enable-flag--rev == true) {
+            /**
+             * Tiny reversed flags.
+             */
+            &.flag--rev,
+            &%flag--rev {
+
+                > .flag__img,
+                > %flag__img {
+                    padding-right: 0;
+                    padding-left: $flag-gutter--tiny;
+                }
+            }
+        }
+    }
+}
+
+
+
+@if ($enable-flag--small == true) {
+    /**
+     * Small flags.
+     */
+    .flag--small,
+    %flag--small {
+
+        > .flag__img,
+        > %flag__img {
+            padding-right: $flag-gutter--small;
+        }
+
+        @if ($enable-flag--rev == true) {
+            /**
+             * Small reversed flags.
+             */
+            &.flag--rev,
+            &%flag--rev {
+
+                > .flag__img,
+                > %flag__img {
+                    padding-right: 0;
+                    padding-left: $flag-gutter--small;
+                }
+            }
+        }
+    }
+}
+
+
+
+@if ($enable-flag--large == true) {
+    /**
+     * Large flags.
+     */
+    .flag--large,
+    %flag--large {
+
+        > .flag__img,
+        > %flag__img {
+            padding-right: $flag-gutter--large;
+        }
+
+        @if ($enable-flag--rev == true) {
+            /**
+             * Large reversed flags.
+             */
+            &.flag--rev,
+            &%flag--rev {
+
+                > .flag__img,
+                > %flag__img {
+                    padding-right: 0;
+                    padding-left: $flag-gutter--large;
+                }
+            }
+        }
+    }
+}
+
+
+
+@if ($enable-flag--huge == true) {
+    /**
+     * Huge flags.
+     */
+    .flag--huge,
+    %flag--huge {
+
+        > .flag__img,
+        > %flag__img {
+            padding-right: $flag-gutter--huge;
+        }
+
+        @if ($enable-flag--rev == true) {
+            /**
+             * Huge reversed flags.
+             */
+            &.flag--rev,
+            &%flag--rev {
+
+                > .flag__img,
+                > %flag__img {
+                    padding-right: 0;
+                    padding-left: $flag-gutter--huge;
+                }
+            }
+        }
+    }
+}
+
+
+
+@if ($enable-flag--rev == true) {
+    /**
+     * Reversed flag objects have their image-content to the right, and text-content
+     * to the left.
+     *
+     * 1. Swap the rendered direction of the object…
+     * 2. …and reset it.
+     * 3. Reassign margins to the correct sides.
+     */
+    .flag--rev,
+    %flag--rev {
+        direction: rtl; /* [1] */
+        > .flag__img,
+        > %flag__img,
+        > .flag__body,
+        > %flag__body {
+            direction: ltr; /* [2] */
+        }
+
+        > .flag__img,
+        > %flag__img {
+            padding-right: 0; /* [3] */
+            padding-left: $flag-gutter; /* [3] */
+        }
+    }
+}
+
+
+
+@if ($enable-flag--flush == true) {
+    /**
+     * Flush flag objects have no space between the image and text content.
+     */
+    .flag--flush,
+    %flag--flush {
+
+        > .flag__img,
+        > %flag__img {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}
+
+
+
+@if ($enable-flag--top == true) {
+    /**
+     * Vertically top aligned flag objects.
+     */
+    .flag--top,
+    %flag--top {
+
+        > .flag__img,
+        > %flag__img,
+        > .flag__body,
+        > %flag__body {
+            vertical-align: top;
+        }
+    }
+}
+
+
+
+@if ($enable-flag--bottom == true) {
+    /**
+     * Vertically bottom aligned flag objects.
+     */
+    .flag--bottom,
+    %flag--bottom {
+
+        > .flag__img,
+        > %flag__img,
+        > .flag__body,
+        > %flag__body {
+            vertical-align: bottom;
+        }
+    }
+}
+
+
+
+@if ($enable-flag--responsive == true) {
+    /**
+     * Responsive flag objects.
+     *
+     * There is a very pragmatic, simple implementation of a responsive flag
+     * object, which simply places the text-content beneath the image-content.
+     *
+     * We use a `max-width` media query because:
+     *
+     * a) it is the least verbose method in terms of amount of code required.
+     * b) the flag object’s default state is image-next-to-text, so its stacked
+     *    state is the exception, rather than the rule.
+     */
+    @media screen and (max-width: $flag-collapse-at) {
+
+        .flag--responsive,
+        %flag--responsive {
+
+            @if ($enable-flag--rev == true) {
+                /**
+                 * Disable reversal of content because there is no concept of
+                 * ‘reversed’ in a stacked layout.
+                 */
+                direction: ltr;
+            }
+
+            &,
+            > .flag__img,
+            > %flag__img,
+            > .flag__body,
+            > %flag__body {
+                display: block;
+            }
+
+            /**
+             * Rework the spacings on regular flag objects.
+             */
+            > .flag__img,
+            > %flag__img {
+                padding-right: 0;
+                padding-left: 0;
+                margin-bottom: $flag-gutter;
+            }
+
+            @if ($enable-flag--tiny == true) {
+                /**
+                 * Tiny responsive flags.
+                 *
+                 * Take a little more heavy-handed approach to reworking
+                 * spacings on flags that are also tiny flags in their regular
+                 * state.
+                 */
+                &.flag--tiny,
+                &%flag--tiny {
+
+                    > .flag__img,
+                    > %flag__img {
+                        padding-right: 0;
+                        padding-left: 0;
+                        margin-bottom: $flag-gutter--tiny;
+                    }
+                }
+            }
+
+            @if ($enable-flag--small == true) {
+                /**
+                 * Small responsive flags.
+                 *
+                 * Take a little more heavy-handed approach to reworking
+                 * spacings on flags that are also small flags in their regular
+                 * state.
+                 */
+                &.flag--small,
+                &%flag--small {
+
+                    > .flag__img,
+                    > %flag__img {
+                        padding-right: 0;
+                        padding-left: 0;
+                        margin-bottom: $flag-gutter--small;
+                    }
+                }
+            }
+
+            @if ($enable-flag--large == true) {
+                /**
+                 * Large responsive flags.
+                 *
+                 * Take a little more heavy-handed approach to reworking
+                 * spacings on flags that are also large flags in their regular
+                 * state.
+                 */
+                &.flag--large,
+                &%flag--large {
+
+                    > .flag__img,
+                    > %flag__img {
+                        padding-right: 0;
+                        padding-left: 0;
+                        margin-bottom: $flag-gutter--large;
+                    }
+                }
+            }
+
+            @if ($enable-flag--huge == true) {
+                /**
+                 * Huge responsive flags.
+                 *
+                 * Take a little more heavy-handed approach to reworking
+                 * spacings on flags that are also huge flags in their regular
+                 * state.
+                 */
+                &.flag--huge,
+                &%flag--huge {
+
+                    > .flag__img,
+                    > %flag__img {
+                        padding-right: 0;
+                        padding-left: 0;
+                        margin-bottom: $flag-gutter--huge;
+                    }
+                }
+            }
+        }
+    }
+}

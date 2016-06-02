@@ -1,0 +1,29 @@
+﻿/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #WRAPPERS
+// ------------------------------------------------------------------------- //
+
+
+
+/**
+ * Wrapper object
+ */
+.wrapper {
+    width: $wrapper-width-mobile;
+    padding: $base-spacing-unit;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-query("tablet") {
+        width: $wrapper-width-tablet;
+    }
+
+    @include media-query("laptop") {
+        width: $wrapper-width-laptop;
+    }
+
+    @include media-query("desktop") {
+        width: $wrapper-width-desktop;
+    }
+}

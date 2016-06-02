@@ -1,0 +1,43 @@
+/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #PARAGRAPHS
+//
+// A simple abstraction for making equal-width navigation tabs.
+// ------------------------------------------------------------------------- //
+
+
+
+/**
+ * Tabs object
+ *
+ * 1. Reset any residual styles (most likely from lists).
+ * 2. Tables for layout!
+ * 3. Force all `table-cell` children to have equal widths.
+ * 4. Force the object to be the full width of its parent. Combined with [2],
+ *    this makes the object behave in a quasi-`display: block;` manner.
+ */
+.tabs,
+%tabs {
+    display: table; /* [2] */
+    width: 100%; /* [4] */
+    margin: 0; /* [1] */
+    padding: 0; /* [1] */
+    text-align: center;
+    table-layout: fixed; /* [3] */
+    list-style: none; /* [1] */
+}
+
+
+
+.tabs__item,
+%tabs__item {
+    display: table-cell; /* [2] */
+}
+
+
+
+.tabs__link,
+%tabs__link {
+    display: block;
+}

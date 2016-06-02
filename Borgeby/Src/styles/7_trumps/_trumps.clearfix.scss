@@ -1,0 +1,22 @@
+/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #CLEARFIX
+// ------------------------------------------------------------------------- //
+
+
+
+/**
+ * Micro clearfix
+ * http://css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ * Extend the class with Sass to avoid the `.clearfix` class appearing
+ * over and over in your markup.
+ */
+.clearfix,
+%clearfix {
+    &::after {
+        clear: both;
+        display: table;
+        content: "";
+    }
+}

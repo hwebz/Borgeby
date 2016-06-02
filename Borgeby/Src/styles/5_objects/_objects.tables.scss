@@ -1,0 +1,168 @@
+/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #TABLES
+// ------------------------------------------------------------------------- //
+
+
+
+// Padding
+$table-padding:             $base-spacing-unit;
+$table-padding--tiny:       quarter($table-padding);
+$table-padding--small:      halve($table-padding);
+
+
+// Modifiers
+$enable-table--fixed:       false;
+$enable-table--tiny:        false;
+$enable-table--small:       false;
+$enable-table--large:       false;
+$enable-table--cells:       true;
+$enable-table--rows:        false;
+$enable-table--columns:     false;
+
+
+// Settings
+$table-border-width:        em(1px);
+$table-border-style:        solid;
+
+
+
+/**
+ * Table object
+ */
+.table,
+%table {
+    width: 100%;
+}
+
+
+
+@if ($enable-table--fixed == true) {
+    /**
+     * Force tables into having equal-width columns.
+     */
+    .table--fixed,
+    %table--fixed {
+        table-layout: fixed;
+    }
+}
+
+
+
+@if ($enable-table--tiny == true) {
+    /**
+     * Tables with very tightly packed cells.
+     */
+    .table--tiny,
+    %table--tiny {
+
+        th,
+        td {
+            padding: $table-padding--tiny;
+        }
+    }
+}
+
+
+
+@if ($enable-table--small == true) {
+    /**
+     * Lightly packed cells.
+     */
+    .table--small,
+    %table--small {
+
+        th,
+        td {
+            padding: $table-padding--small;
+        }
+    }
+}
+
+
+
+@if ($enable-table--large == true) {
+    /**
+     * Tables with very widely padded cells.
+     */
+    .table--large,
+    %table--large {
+
+        th,
+        td {
+            padding: $table-padding;
+        }
+    }
+}
+
+
+
+@if ($enable-table--cells == true) {
+    /**
+     * Add borders around `table` cells.
+     */
+    .table--cells,
+    %table--cells {
+
+        th,
+        td {
+            border: $table-border-width $table-border-style $color-table-border;
+        }
+    }
+}
+
+
+
+@if ($enable-table--rows == true) {
+    /**
+     * Add borders only to `table` rows.
+     */
+    .table--rows,
+    %table--rows {
+
+        &,
+        th,
+        td {
+            border: 0 $table-border-style $color-table-border;
+        }
+    }
+
+    .table--rows,
+    %table--rows {
+        border-collapse: collapse;
+        border-top-width: $table-border-width;
+
+        th,
+        td {
+            border-bottom-width: $table-border-width;
+        }
+    }
+}
+
+
+
+@if ($enable-table--columns == true) {
+    /**
+     * Add borders only to `table` columns.
+     */
+    .table--columns,
+    %table--columns {
+
+        &,
+        th,
+        td {
+            border: 0 $table-border-style $color-table-border;
+        }
+    }
+
+    .table--columns,
+    %table--columns {
+        border-left-width: $table-border-width;
+
+        th,
+        td {
+            border-right-width: $table-border-width;
+        }
+    }
+}

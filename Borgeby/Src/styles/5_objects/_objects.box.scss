@@ -1,0 +1,102 @@
+/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #BLOCK
+//
+// The box object simply boxes off content.
+// ------------------------------------------------------------------------- //
+
+
+
+// Padding
+$box-padding:               $base-spacing-unit;
+$box-padding--tiny:         quarter($box-padding);
+$box-padding--small:        halve($box-padding);
+$box-padding--large:        double($box-padding);
+$box-padding--huge:         quadruple($box-padding);
+
+
+// Modifiers
+$enable-box--flush:         false;
+$enable-box--tiny:          false;
+$enable-box--small:         false;
+$enable-box--large:         false;
+$enable-box--huge:          false;
+
+
+
+/**
+ * Box object
+ *
+ * 1. So we can apply the `.box` class to naturally-inline elements.
+ */
+.box,
+%box {
+    @extend %clearfix;
+    display: block; /* [1] */
+    padding: $box-padding;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
+@if ($enable-box--flush == true) {
+    /**
+     * Flush (i.e. no padding) box.
+     */
+    .box--flush,
+    %box--flush {
+        padding: 0;
+    }
+}
+
+
+
+@if ($enable-box--tiny == true) {
+    /**
+     * Tiny box.
+     */
+    .box--tiny,
+    %box--tiny {
+        padding: $box-padding--tiny;
+    }
+}
+
+
+
+@if ($enable-box--small == true) {
+    /**
+     * Small box.
+     */
+    .box--small,
+    %box--small {
+        padding: $box-padding--small;
+    }
+}
+
+
+
+@if ($enable-box--large == true) {
+    /**
+     * Large box.
+     */
+    .box--large,
+    %box--large {
+        padding: $box-padding--large;
+    }
+}
+
+
+
+@if ($enable-box--huge == true) {
+    /**
+     * Huge box.
+     */
+    .box--huge,
+    %box--huge {
+        padding: $box-padding--huge;
+    }
+}

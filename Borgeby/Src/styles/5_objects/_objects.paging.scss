@@ -1,0 +1,35 @@
+﻿/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #PAGING
+// ------------------------------------------------------------------------- //
+
+
+
+/**
+ * Paging object
+ */
+.paging {
+    padding-top: $base-spacing-unit--large;
+    padding-bottom: $base-spacing-unit--large;
+}
+
+
+
+.paging__list {
+    @extend %list-inline;
+    display: inline-block;
+}
+
+
+
+.paging__link {
+    display: block;
+    padding: $base-spacing-unit--small $base-spacing-unit;
+
+    &.is-active {
+        @include pseudo-classes(true) {
+            color: $color-base-text;
+        }
+    }
+}

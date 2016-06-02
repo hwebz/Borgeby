@@ -1,0 +1,226 @@
+﻿/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #OWL-CAROUSEL
+//
+// http://www.owlcarousel.owlgraphic.com/
+// ------------------------------------------------------------------------- //
+
+
+
+// Settings
+$nav-color:                 $color-white;
+$nav-color-hover:           $color-white;
+$nav-background:            $color-gray-mine-shaft;
+$nav-background-hover:      $color-gray-mine-shaft;
+$nav-width:                 $base-spacing-unit--large;
+$nav-height:                $base-spacing-unit--large;
+$nav-font-size:             14px;
+$nav-rounded:               50%;
+$nav-margin:                0 em(40px);
+$nav-padding:               em(1px);
+$nav-opacity:               .8;
+$nav-opacity-hover:         1;
+$nav-disabled-opacity:      .5;
+
+$dot-background:            $color-gray-mine-shaft;
+$dot-background-active:     $color-red-monza;
+$dot-width:                 em(8px);
+$dot-height:                em(8px);
+$dot-rounded:               50%;
+$dot-margin:                0 em(3px);
+$dot-opacity:               .8;
+
+
+
+/**
+ * Owl Carousel component
+ *
+ * 1. Position relative and z-index fix webkit rendering fonts issue.
+ * 2. Fix for flashing background.
+ */
+.owl-carousel {
+    position: relative; /* [1] */
+    z-index: 1; /* [1] */
+    display: none;
+    width: 100%;
+    margin-bottom: $base-spacing-unit;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+
+    .owl-stage {
+        position: relative;
+        -ms-touch-action: pan-Y;
+    }
+
+    .owl-stage::after {
+        clear: both;
+        display: block;
+        height: 0;
+        line-height: 0;
+        visibility: hidden;
+        content: ".";
+    }
+
+    .owl-stage-outer {
+        position: relative;
+        overflow: hidden;
+        -webkit-transform: translate3d(0, 0, 0); /* [2] */
+    }
+
+    .owl-item {
+        position: relative;
+        float: left;
+        min-height: em(1px);
+        -webkit-backface-visibility: hidden;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+    }
+
+    .owl-item img {
+        display: block;
+        -webkit-transform-style: preserve-3d;
+    }
+
+    .owl-nav.disabled,
+    .owl-dots.disabled {
+        display: none;
+    }
+
+    .owl-nav .owl-prev,
+    .owl-nav .owl-next,
+    .owl-dot {
+        cursor: pointer;
+        cursor: hand;
+        user-select: none;
+    }
+
+    &.owl-loaded {
+        display: block;
+    }
+
+    &.owl-loading {
+        display: block;
+        opacity: 0;
+    }
+
+    &.owl-hidden {
+        opacity: 0;
+    }
+
+    &.owl-refresh .owl-item {
+        display: none;
+    }
+
+    &.owl-drag .owl-item {
+        user-select: none;
+    }
+
+    &.owl-grab {
+        cursor: move;
+        cursor: -webkit-grab;
+        cursor: -o-grab;
+        cursor: -ms-grab;
+        cursor: grab;
+    }
+
+    &.owl-rtl {
+        direction: rtl;
+    }
+
+    &.owl-rtl .owl-item {
+        float: right;
+    }
+}
+
+
+
+.owl-carousel .figure {
+    margin-bottom: 0;
+}
+
+
+
+.owl-theme {
+    // Styling Next and Prev buttons
+    .owl-nav {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        -webkit-tap-highlight-color: transparent;
+
+        [class*='owl-'] {
+            @include font-size($nav-font-size, "none");
+            display: inline-block;
+            width: $nav-width;
+            height: $nav-height;
+            margin: $nav-margin;
+            padding: $nav-padding;
+            color: $nav-color;
+            background: $nav-background;
+            border-radius: $nav-rounded;
+            opacity: $nav-opacity;
+            cursor: pointer;
+
+            &:hover {
+                color: $nav-color-hover;
+                text-decoration: none;
+                background: $nav-background-hover;
+                opacity: $nav-opacity-hover;
+            }
+        }
+
+        .owl-prev {
+            padding-right: em(2px);
+        }
+
+        .owl-next {
+            padding-left: em(2px);
+        }
+
+        .disabled {
+            opacity: $nav-disabled-opacity;
+            cursor: default;
+        }
+    }
+    // Styling dots
+    .owl-nav.disabled + .owl-dots {
+        margin-top: em(10px);
+    }
+
+    .owl-dots {
+        position: absolute;
+        bottom: em(12px);
+        left: 50%;
+        width: em(80px);
+        margin-left: -em(40px);
+        text-align: center;
+        -webkit-tap-highlight-color: transparent;
+
+        .owl-dot {
+            display: inline-block;
+            zoom: 1;
+            *display: inline;
+            opacity: $dot-opacity;
+
+            span {
+                display: block;
+                width: $dot-width;
+                height: $dot-height;
+                margin: $dot-margin;
+                background: $dot-background;
+                -webkit-backface-visibility: visible;
+                transition: opacity 200ms ease;
+                border-radius: $dot-rounded;
+            }
+
+            &.active,
+            &:hover {
+                span {
+                    background: $dot-background-active;
+                }
+            }
+        }
+    }
+}

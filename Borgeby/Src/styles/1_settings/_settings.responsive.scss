@@ -1,0 +1,72 @@
+﻿/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #RESPONSIVE
+//
+// Breakpoints, wrappers and column settings.
+// ------------------------------------------------------------------------- //
+
+
+
+// Breakpoints (in pixels)
+$breakpoint-tablet-start:       768px;
+$breakpoint-laptop-start:       1024px;
+$breakpoint-desktop-start:      1200px;
+
+
+// Scrollbar width (in pixels - used in wrapper width calculations)
+$scrollbar-width:               16px;
+
+
+// Wrapper width (in percents or em)
+$wrapper-width-mobile:          100%;
+$wrapper-width-tablet:          em($breakpoint-tablet-start - $scrollbar-width);
+$wrapper-width-laptop:          em($breakpoint-laptop-start - $scrollbar-width);
+$wrapper-width-desktop:         em($breakpoint-desktop-start - $scrollbar-width);
+
+
+
+/// Breakpoint aliases and conditions (in em).
+/// These can be invoked via the `media-query()` mixin. We use a mobile first
+/// approach and therefore only use min-width and not max-width in conditions.
+$breakpoints: (
+    "tablet"                    "screen and (min-width: #{em($breakpoint-tablet-start)})",
+    "laptop"                    "screen and (min-width: #{em($breakpoint-laptop-start)})",
+    "desktop"                   "screen and (min-width: #{em($breakpoint-desktop-start)})",
+);
+
+
+
+/// Grid size fractions for layout items.
+/// Add the fractions you want to use when sizing grids.
+/// E.g. if you add 6, you can use u-1/6, u-3/6, u-6/6, etc.
+///
+/// @example
+///     <div class="layout__item  u-1/6"></div>
+$widths-columns: (
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+);
+
+
+
+/// Responsive grid size fractions for layout items.
+/// Add the fractions you want to use when sizing responsive grids.
+/// The fractions are then used in combination with the projects defined
+/// breakpoints. E.g. if you add 6, you can use u-1/6-tablet, u-3/6-laptop, etc.
+///
+/// @see $breakpoints
+/// @example
+///     <div class="layout__item  u-1/6-tablet"></div>
+$widths-columns-responsive: (
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+);

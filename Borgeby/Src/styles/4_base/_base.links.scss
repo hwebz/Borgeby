@@ -1,0 +1,19 @@
+﻿/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #LINKS
+// ------------------------------------------------------------------------- //
+
+
+
+/*
+ * 1. Prevent touch delay on touch devices (https://adactio.com/journal/10019)
+ */
+a {
+    color: $color-link;
+    touch-action: manipulation; /* [1] */
+
+    @include pseudo-classes(false) {
+        color: $color-link-hover;
+    }
+}

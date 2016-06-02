@@ -1,0 +1,16 @@
+﻿/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #PAGE-FOOTER
+// ------------------------------------------------------------------------- //
+
+
+
+/**
+ * Page footer component
+ */
+.page-footer {
+    padding: $base-spacing-unit;
+    color: $color-page-footer;
+    background-color: $color-page-footer-background;
+}

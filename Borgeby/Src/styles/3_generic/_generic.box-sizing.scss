@@ -1,0 +1,25 @@
+/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #BOX-SIZING
+//
+// The box-sizing module causes all elements to use the more useful
+// border-box box model.
+// http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+// http://paulirish.com/2012/box-sizing-border-box-ftw
+// ------------------------------------------------------------------------- //
+
+
+
+html {
+    box-sizing: border-box;
+}
+
+
+* {
+    &,
+    &::before,
+    &::after {
+        box-sizing: inherit;
+    }
+}

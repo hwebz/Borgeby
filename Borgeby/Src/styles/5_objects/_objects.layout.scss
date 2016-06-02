@@ -1,0 +1,280 @@
+/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #LAYOUT
+//
+// The inuitcss layout system uses `box-sizing: border-box` and
+// `display: inline-block` to create an extremely powerful, flexible
+// alternative to the traditional grid system.
+// ------------------------------------------------------------------------- //
+
+
+
+// Gutter
+// If the base spacing unit is in em, we must convert it to rem. This is due
+// to a whitespace fix `font size: 0` that we set on layout groups to remove
+// whitespace between layout items. If we would use em instead, all paddings
+// and margins in the layout groups would be 0.
+$layout-gutter:             rem($base-spacing-unit);
+$layout-gutter--tiny:       quarter($layout-gutter);
+$layout-gutter--small:      halve($layout-gutter);
+$layout-gutter--large:      double($layout-gutter);
+$layout-gutter--huge:       quadruple($layout-gutter);
+
+
+// Modifiers
+$enable-layout--tiny:       false;
+$enable-layout--small:      false;
+$enable-layout--large:      false;
+$enable-layout--huge:       false;
+$enable-layout--flush:      false;
+$enable-layout--rev:        false;
+$enable-layout--middle:     false;
+$enable-layout--bottom:     false;
+$enable-layout--right:      false;
+$enable-layout--center:     false;
+$enable-layout--auto:       false;
+$enable-layout--flex:       false;
+
+
+
+/**
+ * Begin a layout group.
+ * 1. Remove whitespace between child element.
+ */
+.layout,
+%layout {
+    margin: 0;
+    padding: 0;
+    margin-left: -$layout-gutter;
+    margin-bottom: $layout-gutter;
+    font-size: 0; /* [1] */
+    list-style: none;
+}
+
+
+/**
+ * 1. Cause columns to stack side-by-side.
+ * 2. Space columns apart.
+ * 3. Align columns to the tops of each other.
+ * 4. Full-width unless told to behave otherwise.
+ * 5. Restore font-size from 0 to `$base-font-size`.
+ */
+.layout__item,
+%layout__item {
+    @include font-size($base-font-size, none); /* [5] */
+    display: inline-block; /* [1] */
+    width: 100%; /* [4] */
+    padding-left: $layout-gutter; /* [2] */
+    vertical-align: top; /* [3] */
+}
+
+
+
+@if ($enable-layout--tiny == true) {
+    /**
+     * Layouts with tiny gutters.
+     */
+    .layout--tiny,
+    %layout--tiny {
+        margin-left: -($layout-gutter--tiny);
+
+        > .layout__item,
+        > %layout__item {
+            padding-left: $layout-gutter--tiny;
+        }
+    }
+}
+
+
+
+@if ($enable-layout--small == true) {
+    /**
+     * Layouts with small gutters.
+     */
+    .layout--small,
+    %layout--small {
+        margin-left: -($layout-gutter--small);
+
+        > .layout__item,
+        > %layout__item {
+            padding-left: $layout-gutter--small;
+        }
+    }
+}
+
+
+
+@if ($enable-layout--large == true) {
+    /**
+     * Layouts with large gutters.
+     */
+    .layout--large,
+    %layout--large {
+        margin-left: -($layout-gutter--large);
+
+        > .layout__item,
+        > %layout__item {
+            padding-left: $layout-gutter--large;
+        }
+    }
+}
+
+
+
+@if ($enable-layout--huge == true) {
+    /**
+     * Layouts with huge gutters.
+     */
+    .layout--huge,
+    %layout--huge {
+        margin-left: -($layout-gutter--huge);
+
+        > .layout__item,
+        > %layout__item {
+            padding-left: $layout-gutter--huge;
+        }
+    }
+}
+
+
+
+@if ($enable-layout--flush == true) {
+    /**
+     * Layouts with no gutters.
+     */
+    .layout--flush,
+    %layout--flush {
+        margin-left: 0;
+
+        > .layout__item,
+        > %layout__item {
+            padding-left: 0;
+        }
+    }
+}
+
+
+
+@if ($enable-layout--rev == true) {
+    /**
+     * Reversed rendered order of layout items, e.g. items 1, 2, 3, 4 in your
+     * markup will display in order 4, 3, 2, 1 on your page.
+     */
+    .layout--rev,
+    %layout--rev {
+        direction: rtl;
+        text-align: left;
+        flex-direction: row-reverse;
+
+        > .layout__item,
+        > %layout__item {
+            direction: ltr;
+            text-align: left;
+        }
+    }
+}
+
+
+
+@if ($enable-layout--middle == true) {
+    /**
+     * Align layout items to the vertical centers of each other.
+     */
+    .layout--middle,
+    %layout--middle {
+        align-items: center;
+
+        > .layout__item,
+        > %layout__item {
+            vertical-align: middle;
+        }
+    }
+}
+
+
+
+@if ($enable-layout--bottom == true) {
+    /**
+     * Align layout items to the vertical bottoms of each other.
+     */
+    .layout--bottom,
+    %layout--bottom {
+        align-items: flex-end;
+
+        > .layout__item,
+        > %layout__item {
+            vertical-align: bottom;
+        }
+    }
+}
+
+
+
+@if ($enable-layout--right == true) {
+    /**
+     * Make the layout items fill up from the right hand side.
+     */
+    .layout--right,
+    %layout--right {
+        text-align: right;
+        justify-content: flex-end;
+
+        > .layout__item,
+        > %layout__item {
+            text-align: left;
+        }
+    }
+}
+
+
+
+@if ($enable-layout--center == true) {
+    /**
+     * Make the layout items fill up from the center outward.
+     */
+    .layout--center,
+    %layout--center {
+        text-align: center;
+        justify-content: center;
+
+        > .layout__item,
+        > %layout__item {
+            text-align: left;
+        }
+    }
+}
+
+
+
+@if ($enable-layout--auto == true) {
+    /**
+     * Cause layout items to take up a non-explicit amount of width.
+     */
+    .layout--auto,
+    %layout--auto {
+
+        > .layout__item,
+        > %layout__item {
+            width: auto;
+        }
+    }
+}
+
+
+
+@if ($enable-layout--flex == true) {
+    /**
+     * Cause layout items to fill the vertical space of parent layout
+     */
+    .layout--flex,
+    %layout--flex {
+        display: flex;
+        flex-wrap: wrap;
+
+        > .layout__item,
+        > %layout__item {
+            display: flex;
+        }
+    }
+}

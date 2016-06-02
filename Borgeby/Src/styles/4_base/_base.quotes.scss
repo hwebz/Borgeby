@@ -1,0 +1,65 @@
+﻿/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #QUOTES
+// ------------------------------------------------------------------------- //
+
+
+
+q {
+    font-style: italic;
+    quotes: $glyph-quote-left-double $glyph-quote-right-double;
+
+    &::before {
+        content: open-quote;
+    }
+
+    &::after {
+        content: close-quote;
+    }
+}
+
+
+blockquote {
+    position: relative;
+    margin: $base-spacing-unit--large $base-spacing-unit;
+    padding: $base-spacing-unit $base-spacing-unit--huge;
+    font-style: italic;
+    background: $color-blockquote-background;
+    border-left: $base-spacing-unit--small solid $color-blockquote-border;
+    quotes: $glyph-quote-left-double $glyph-quote-right-double;
+
+    p {
+        &::before {
+            @include font-size(72px);
+            position: absolute;
+            top: 0;
+            left: $base-spacing-unit--tiny;
+            font-weight: normal;
+            color: $color-blockquote-quote;
+            content: open-quote;
+        }
+
+        &::after {
+            content: no-close-quote;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    small,
+    footer {
+        color: $color-blockquote-footer;
+
+        &::before {
+            content: $glyph-em-dash $glyph-no-break-space;
+        }
+    }
+}
+
+
+cite {
+    // Placeholder
+}

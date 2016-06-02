@@ -1,0 +1,132 @@
+/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #BLOCK
+//
+// The block object simply stacks an image on top of some text-like content.
+// A simple abstraction to cover a very commonly occurring design pattern.
+// ------------------------------------------------------------------------- //
+
+
+
+// Gutter
+$block-gutter:              $base-spacing-unit;
+$block-gutter--tiny:        quarter($block-gutter);
+$block-gutter--small:       halve($block-gutter);
+$block-gutter--large:       double($block-gutter);
+$block-gutter--huge:        quadruple($block-gutter);
+
+
+// Modifiers
+$enable-block--flush:       false;
+$enable-block--tiny:        false;
+$enable-block--small:       false;
+$enable-block--large:       false;
+$enable-block--huge:        false;
+$enable-block--center:      false;
+$enable-block--right:       false;
+
+
+
+/**
+ * Block object
+ */
+.block,
+%block {
+    display: block;
+}
+
+
+
+/**
+ * 1. Eliminate whitespace around images.
+ */
+.block__img,
+%block__img {
+    margin-bottom: $block-gutter;
+    vertical-align: middle; /* [1] */
+
+    @if ($enable-block--flush == true) {
+        /**
+         * No space between the image and the text content.
+         */
+        .block--flush > &,
+        %block--flush > & {
+            margin-bottom: 0;
+        }
+    }
+
+    @if ($enable-block--tiny == true) {
+        /**
+         * Tiny space between the image and the text content.
+         */
+        .block--tiny > &,
+        %block--tiny > & {
+            margin-bottom: $block-gutter--tiny;
+        }
+    }
+
+    @if ($enable-block--small == true) {
+        /**
+         * Small space between the image and the text content.
+         */
+        .block--small > &,
+        %block--small > & {
+            margin-bottom: $block-gutter--small;
+        }
+    }
+
+    @if ($enable-block--large == true) {
+        /**
+         * Large space between the image and the text content.
+         */
+        .block--large > &,
+        %block--large > & {
+            margin-bottom: $block-gutter--large;
+        }
+    }
+
+    @if ($enable-block--huge == true) {
+        /**
+         * Huge space between the image and the text content.
+         */
+        .block--huge > &,
+        %block--huge > & {
+            margin-bottom: $block-gutter--huge;
+        }
+    }
+}
+
+
+
+/**
+ * Text-content.
+ */
+.block__body,
+%block__body {
+    display: block;
+}
+
+
+
+@if ($enable-block--right == true) {
+    /**
+     * Right-aligned blocks.
+     */
+    .block--right,
+    %block--right {
+        text-align: right;
+    }
+}
+
+
+
+@if ($enable-block--center == true) {
+    /**
+     * Center-aligned blocks.
+     */
+    .block--center,
+    %block--center {
+        text-align: center;
+    }
+}

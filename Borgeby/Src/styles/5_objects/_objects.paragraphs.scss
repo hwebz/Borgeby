@@ -1,0 +1,35 @@
+﻿/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #PARAGRAPHS
+// ------------------------------------------------------------------------- //
+
+
+
+/**
+ * The `.lede` class is used to make the introductory text (usually a paragraph)
+ * of a document slightly larger: http://en.wikipedia.org/wiki/Lede_(news)
+ *
+ * 1. Sequences of whitespace will collapse into a single whitespace.
+ *    Text will wrap when necessary, and on line breaks. This is a fix to
+ *    enable line breaks in long string properties in EPiServer.
+ */
+.lead,
+%lead {
+    @include font-size($base-font-size * 1.2, inherit);
+    white-space: pre-line; /* [1] */
+}
+
+
+
+/**
+ * The `.preline` class is used to create line breaks in EPiServer string properties.
+ *
+ * 1. Sequences of whitespace will collapse into a single whitespace.
+ *    Text will wrap when necessary, and on line breaks. This is a fix to
+ *    enable line breaks in long string properties in EPiServer.
+ */
+.preline,
+%preline {
+    white-space: pre-line; /* [1] */
+}

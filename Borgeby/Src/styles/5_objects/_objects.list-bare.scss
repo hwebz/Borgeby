@@ -1,0 +1,20 @@
+/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #LIST-BARE
+//
+// The list-bare object simply removes any indents and bullet points
+// from lists.
+// ------------------------------------------------------------------------- //
+
+
+
+/**
+ * Bare list object
+ */
+.list-bare,
+%list-bare {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

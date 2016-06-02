@@ -1,0 +1,168 @@
+/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #FUNCTIONS
+// ------------------------------------------------------------------------- //
+
+
+
+/// Divide a number by 4.
+///
+/// @param {number} $number - The number to divide
+/// @return {number} - The result of the division
+/// @example
+///     .foo {
+///         padding: quarter(4px);
+///     }
+///
+///     // .foo {
+///     //    padding: 1px;
+///     // }
+@function quarter($number) {
+    @return ($number / 4);
+}
+
+
+
+/// Divide a number by 2.
+///
+/// @param {number} $number - The number to divide
+/// @return {number} - The result of the division
+/// @example
+///     .foo {
+///         padding: halve(4px);
+///     }
+///
+///     // .foo {
+///     //    padding: 2px;
+///     // }
+@function halve($number) {
+    @return ($number / 2);
+}
+
+
+
+/// Multiply a number by 2.
+///
+/// @param {number} $number - The number to multiply
+/// @return {number} - The result of the division
+/// @example
+///     .foo {
+///         padding: double(4px);
+///     }
+///
+///     // .foo {
+///     //    padding: 8px;
+///     // }
+@function double($number) {
+    @return ($number * 2);
+}
+
+
+
+/// Multiply a number by 4.
+///
+/// @param {number} $number - The number to multiply
+/// @return {number} - The result of the division
+/// @example
+///     .foo {
+///         padding: quadruple(4px);
+///     }
+///
+///     // .foo {
+///     //    padding: 16px;
+///     // }
+@function quadruple($number) {
+    @return ($number * 4);
+}
+
+
+
+/// Strip unit from a number.
+///
+/// @param {number} number - The number to strip
+/// @return {number} - The unitless number
+/// @example
+///     strip-unit(32px);
+///
+///     // 32;
+///
+/// @example
+///     strip-unit(3em);
+///
+///     // 3;
+@function strip-unit($number) {
+    @return $number / ($number * 0 + 1);
+}
+
+
+
+/// Convert a pixel or rem value to em.
+///
+/// @param {number} size - The size to convert
+/// @param {number} $base [$base-font-size] - The base size to calculate rem unit from
+/// @return {number} - The result in em
+/// @example
+///     .foo {
+///         padding: em(8px);
+///     }
+///
+///     // .foo {
+///     //    padding: 0.5em;
+///     // }
+///
+/// @example
+///     .bar {
+///         padding: em(20px, 10px);
+///     }
+///
+///     // .foo {
+///     //    padding: 2em;
+///     // }
+@function em($size, $base: $base-font-size) {
+
+    // If a unitless number or a pixel value has been sent in,
+    // we divide the value with the base to get the rem value.
+    @if unitless($size) or unit($size) == "px" {
+        $size: $size / $base;
+    }
+
+    // Strip unit from the size and convert to rem
+    @return strip-unit($size) * 1em;
+}
+
+
+
+/// Convert a pixel or em value to rem.
+///
+/// @param {number} size - The size to convert
+/// @param {number} $base [$base-font-size] - The base size to calculate rem unit from
+/// @return {number} - The result in rem
+/// @example
+///     .foo {
+///         padding: rem(8px);
+///     }
+///
+///     // .foo {
+///     //    padding: 0.5rem;
+///     // }
+///
+/// @example
+///     .bar {
+///         padding: rem(20px, 10px);
+///     }
+///
+///     // .foo {
+///     //    padding: 2rem;
+///     // }
+@function rem($size, $base: $base-font-size) {
+
+    // If a unitless number or a pixel value has been sent in,
+    // we divide the value with the base to get the rem value.
+    @if unitless($size) or unit($size) == "px" {
+        $size: $size / $base;
+    }
+
+    // Strip unit from the size and convert to rem
+    @return strip-unit($size) * 1rem;
+}

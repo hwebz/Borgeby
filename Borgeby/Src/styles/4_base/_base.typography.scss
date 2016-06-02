@@ -1,0 +1,82 @@
+﻿/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #TYPOGRAPHY
+// ------------------------------------------------------------------------- //
+
+
+
+strong {
+    // Placeholder
+}
+
+
+em {
+    font-style: italic;
+}
+
+
+small {
+    @include font-size(14px);
+}
+
+
+mark {
+    background-color: $color-mark-background;
+}
+
+
+abbr {
+    // Placeholder
+}
+
+
+del {
+    // Placeholder
+}
+
+
+ins {
+    // Placeholder
+}
+
+
+sub {
+    // Placeholder
+}
+
+
+sup {
+    // Placeholder
+}
+
+
+figure {
+    figcaption {
+        @include font-size(14px);
+        font-style: italic;
+    }
+}
+
+
+hr {
+    margin-top: $base-spacing-unit--large;
+    margin-bottom: $base-spacing-unit--large;
+    border: none;
+    border-bottom: em(1px) solid $color-hr;
+}
+
+
+dl {
+    dt {
+        font-weight: bold;
+    }
+
+    dd {
+        margin-left: $base-spacing-unit;
+
+        &::before {
+            content: $glyph-en-dash $glyph-no-break-space;
+        }
+    }
+}

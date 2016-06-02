@@ -1,0 +1,280 @@
+﻿/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #MIXINS
+// ------------------------------------------------------------------------- //
+
+
+
+/// Create a fully formed type style (sizing and vertical rhythm).
+/// Will generate a rem-based font-size with its pixel fallback.
+///
+/// @param {Px} $font-size - The font size to set.
+/// @param {Integer} $line-height - The line height to set. Can be any integer, `inherit`, `normal` or `none`.
+///
+/// @example
+///     .foo {
+///         @include font-size(12px);
+///     }
+///
+///     // .foo {
+///     //     font-size: 12px;
+///     //     font-size: 0.75rem;
+///     //     line-height: 2;
+///     // }
+///
+/// @example
+///     .foo {
+///         @include font-size(12px, none);
+///     }
+///
+///     // .foo {
+///     //     font-size: 12px;
+///     //     font-size: 0.75rem;
+///     // }
+@mixin font-size($font-size, $line-height: auto) {
+    font-size: $font-size;
+    font-size: rem($font-size);
+
+    @if $line-height == auto {
+        line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+    }
+
+    @else {
+
+        @if (type-of($line-height) == number or $line-height == inherit or $line-height == normal) {
+            line-height: $line-height;
+        }
+
+        @elseif ($line-height != none and $line-height != false) {
+            @warn "\"#{$line-height}\" is not a valid value for \"line-height\".";
+        }
+    }
+}
+
+
+
+/// Apply pseudo class styles for links and buttons.
+///
+/// @param {Boolean} $includeBaseState - If element base state should be included in ruleset
+///
+/// @example
+///     .foo {
+///         text-decoration: none;
+///
+///         @include pseudo-classes(false) {
+///             text-decoration: underline;
+///         }
+///     }
+///
+///     // .foo {
+///     //     text-decoration: none;
+///     // }
+///     //
+///     // .foo:hover,
+///     // .foo:focus,
+///     // .foo:hover,
+///     // .foo:active {
+///     //     font-weight: bold;
+///     // }
+///
+/// @example
+///     .foo {
+///         @include pseudo-classes(true) {
+///             font-weight: bold;
+///         }
+///     }
+///
+///     // .foo,
+///     // .foo:hover,
+///     // .foo:focus,
+///     // .foo:hover,
+///     // .foo:active {
+///     //     font-weight: bold;
+///     // }
+@mixin pseudo-classes($include-base-state: false) {
+
+    @if ($include-base-state == true) {
+
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+            @content;
+        }
+    }
+
+    @elseif ($include-base-state == false) {
+
+        &:hover,
+        &:focus,
+        &:active {
+            @content;
+        }
+    }
+}
+
+
+
+/// Provide simple API to selector nesting
+///
+/// @param {String} $selector - Selector
+///
+/// @example
+///     .foo {
+///         font-weight: normal;
+///
+///         @include when-inside(".bar") {
+///             font-weight: bold;
+///         }
+///     }
+///
+///     // .foo {
+///     //     font-weight: normal
+///     // }
+///     //
+///     // .bar .foo {
+///     //     font-weight: bold;
+///     // }
+@mixin when-inside($selector) {
+    #{$selector} & {
+        @content;
+    }
+}
+
+
+
+/// Insert ellipsis (…).
+///
+/// @example
+///     .foo {
+///         @include ellipsis;
+///     }
+///
+///     // .foo {
+///     //     white-space: nowrap;
+///     //     text-overflow: ellipsis;
+///     //     overflow: hidden;
+///     // }
+@mixin ellipsis() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+/// Get a z-index value from a layer name
+///
+/// @param {String} $layer - Layer's name
+/// @throw Error message if layer name is not found in the `z-indexes` map.
+///
+/// @example
+///     .foo {
+///         @include z-index("modal");
+///     }
+///
+///     // .foo {
+///     //     z-index: 4000;
+///     // }
+@mixin z-index($layer) {
+    @if not map-has-key($z-indexes, $layer) {
+        @error "There is no layer named `#{$layer}` in $z-indexes. Layer should be one of #{map-keys($z-indexes)}. ";
+    }
+
+    z-index: map-get($z-indexes, $layer);
+}
+
+
+
+/// Generate media queries from the aliases and conditions defined in responsive settings.
+///
+/// @param {String} $media-query - Media query alias
+///
+/// @example
+///     .foo {
+///         color: green;
+///
+///         @include media-query("tablet") {
+///             color: red;
+///         }
+///     }
+///
+///     // .foo {
+///     //     color: green;
+///     //
+///     //     @media (screen and (min-width: 768px and (max-width: 1024px) {
+///     //         color: red;
+///     //     }
+///     // }
+@mixin media-query($media-query) {
+
+    $breakpoint-found: false;
+
+    // Loop through the list of breakpoints we’ve provided in our settings file.
+    @each $breakpoint in $breakpoints {
+        // Grab the alias and the condition from their respective locations in
+        // the list.
+        $alias: nth($breakpoint, 1);
+        $condition: nth($breakpoint, 2);
+
+        // If the media query we’ve specified has an alias and a condition...
+        @if $media-query == $alias and $condition {
+            // ...tell the mixin that we’ve found it...
+            $breakpoint-found: true;
+
+            // ...and spit it out here.
+            @media #{$condition} {
+                @content;
+            }
+        }
+    }
+    // If the user specifies a non-exitent alias, send them a warning.
+    @if $breakpoint-found == false {
+        @warn "Breakpoint \"#{$media-query}\" does not exist.";
+    }
+}
+
+
+
+/// Generate grid width classes.
+///
+/// @param {Integer (separated by spaces)} $width-columns - The columns we want the widths to have.
+/// @param {String} $width-breakpoint [null] - Optional suffix for the width classes.
+///
+/// @example
+///     @include widths(3 4, -tablet);
+///
+///     // Will create thirds and quarters for a tablet breakpoint.
+@mixin widths($widths-columns, $widths-breakpoint: null) {
+
+    // Widths delimeter
+    $widths-delimiter: -of-;
+
+    // Use fractions `<div class="u-1/4">` instead of `<div class="u-1-of-4">`.
+    $widths-use-fractions: true;
+
+    // Depending on what we chose for `$use-fractions`, create the relevant delimiter.
+    @if ($widths-use-fractions == true) {
+        $widths-delimiter: \/;
+    }
+
+    // Loop through the number of columns for each denominator of our fractions.
+    @each $widths-denominator in $widths-columns {
+        // If we’re trying to make wholes, just spit a 100% width utility out one time only.
+        @if ($widths-denominator == 1) {
+            .u-1#{$widths-delimiter}1#{$widths-breakpoint} {
+                width: 100% !important;
+            }
+        }
+        @else {
+            // Begin creating a numberator for our fraction up until we hit the denominator.
+            @for $widths-numerator from 1 to $widths-denominator {
+                // Build a class in the format `.u-3/4` or `.u-3-of-4`.
+                .u-#{$widths-numerator}#{$widths-delimiter}#{$widths-denominator}#{$widths-breakpoint} {
+                    width: ($widths-numerator / $widths-denominator) * 100% !important;
+                }
+            }
+        }
+    }
+}

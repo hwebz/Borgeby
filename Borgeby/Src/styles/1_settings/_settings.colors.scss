@@ -1,0 +1,87 @@
+﻿// ------------------------------------------------------------------------- //
+// #COLORS
+//
+// Color definitions and global color usings.
+// Use http://chir.ag/projects/name-that-color to name colors.
+// ------------------------------------------------------------------------- //
+
+
+
+// Palette
+$color-black:                       rgb(0, 0, 0);
+$color-white:                       rgb(255, 255, 255);
+$color-red-monza:                   rgb(153, 31, 61);
+$color-red-claret:                  rgb(118, 25, 48);
+$color-gray-mine-shaft:             rgb(61, 61, 61);
+$color-gray-alto:                   rgb(222, 222, 222);
+$color-yellow-portafino:            rgb(255, 255, 173);
+
+
+// Base
+$color-base-text:                   $color-black;
+$color-base-background:             $color-white;
+
+
+// Links
+$color-link:                        $color-red-monza;
+$color-link-hover:                  $color-red-claret;
+$color-link-outline:                $color-red-monza;
+
+
+// Buttons
+$color-btn-primary:                 $color-white;
+$color-btn-primary-background:      $color-red-monza;
+$color-btn-primary-border:          $color-red-monza;
+$color-btn-secondary:               $color-white;
+$color-btn-secondary-background:    $color-gray-mine-shaft;
+$color-btn-secondary-border:        $color-gray-mine-shaft;
+
+
+// Typography
+$color-mark-background:             $color-yellow-portafino;
+$color-hr:                          $color-gray-alto;
+
+
+// Code
+$color-code:                        $color-red-monza;
+$color-code-background:             $color-gray-alto;
+$color-kbd:                         $color-white;
+$color-kbd-background:              $color-gray-mine-shaft;
+$color-pre:                         $color-gray-mine-shaft;
+$color-pre-background:              $color-gray-alto;
+$color-samp:                        $color-gray-mine-shaft;
+$color-samp-background:             $color-white;
+$color-var:                         $color-gray-mine-shaft;
+$color-var-background:              $color-white;
+
+
+// Quotes
+$color-blockquote-border:           $color-gray-alto;
+$color-blockquote-quote:            $color-gray-alto;
+$color-blockquote-background:       $color-white;
+$color-blockquote-footer:           $color-gray-mine-shaft;
+
+
+// Tables
+$color-table-border:                $color-gray-alto;
+
+
+// Forms
+$color-form:                        $color-gray-mine-shaft;
+$color-form-background:             $color-white;
+$color-form-border:                 $color-gray-alto;
+$color-form-border-focus:           $color-gray-alto;
+$color-form-fieldset-border:        $color-gray-alto;
+
+
+// Page header
+$color-page-header-background:      $color-white;
+
+
+// Navigation
+$color-site-navigation:             $color-base-text;
+
+
+// Page footer
+$color-page-footer:                 $color-white;
+$color-page-footer-background:      $color-gray-mine-shaft;

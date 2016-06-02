@@ -1,0 +1,231 @@
+﻿/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #BUTTONS
+// ------------------------------------------------------------------------- //
+
+
+
+// Padding
+$btn-padding:               $base-spacing-unit;
+$btn-padding--tiny:         quarter($btn-padding);
+$btn-padding--small:        halve($btn-padding);
+$btn-padding--large:        double($btn-padding);
+$btn-padding--huge:         quadruple($btn-padding);
+
+
+/// Modifiers
+$enable-btn--tiny:          false;
+$enable-btn--small:         false;
+$enable-btn--large:         false;
+$enable-btn--huge:          false;
+$enable-btn--full:          true;
+$enable-btn--pill:          false;
+$enable-btn--transparent:   false;
+$enable-btn--center:        false;
+$enable-btn--secondary:     false;
+$enable-btn--close:         false;
+
+
+// Settinngs
+$btn-border-width:          0;
+$btn-border-style:          solid;
+$btn-border-round:          $base-round-unit;
+
+
+
+/**
+ * Button object
+ *
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ * 6. Fixes odd inner spacing in IE7.
+ * 7. Subtract the border size from the padding value so that buttons do not
+ *    grow larger as we add borders.
+ */
+.btn,
+%btn {
+    display: inline-block; /* [1] */
+    padding: ($btn-padding--small - $btn-border-width) ($btn-padding--large - $btn-border-width); /* [7] */
+    margin: 0; /* [4] */
+    overflow: visible; /* [6] */
+    color: $color-btn-primary;
+    font: inherit; /* [3] */
+    text-align: center; /* [4] */
+    text-decoration: none; /* [4] */
+    background-color: $color-btn-primary-background;
+    vertical-align: middle; /* [2] */
+    cursor: pointer; /* [5] */
+    @if ($btn-border-width != 0) {
+        border: $btn-border-width $btn-border-style $color-btn-primary-border;
+    }
+    @else {
+        border: none; /* [4] */
+    }
+
+    @if ($btn-border-round != 0) {
+        border-radius: $btn-border-round;
+    }
+
+    @include pseudo-classes(false) {
+        color: $color-btn-primary;
+        text-decoration: underline;
+    }
+}
+
+/**
+ * Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding.
+ */
+.btn::-moz-focus-inner,
+%btn::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+
+@if ($enable-btn--tiny == true) {
+    /**
+     * Tiny button
+     */
+    .btn--tiny,
+    %btn--tiny {
+        padding: (halve($btn-padding--tiny) - $btn-border-width) ($btn-padding - $btn-border-width); /* [7] */
+    }
+}
+
+
+
+@if ($enable-btn--small == true) {
+    /**
+     * Small buttons.
+     */
+    .btn--small,
+    %btn--small {
+        padding: ($btn-padding--tiny - $btn-border-width) ($btn-padding--large - $btn-border-width); /* [7] */
+    }
+}
+
+
+
+@if ($enable-btn--large == true) {
+    /**
+     * Large buttons.
+     */
+    .btn--large,
+    %btn--large {
+        @include font-size(18px, "none");
+        padding: ($btn-padding--small - $btn-border-width) ($btn-padding--huge - $btn-border-width); /* [7] */
+    }
+}
+
+
+
+@if ($enable-btn--huge == true) {
+    /**
+     * Huge buttons.
+     */
+    .btn--huge,
+    %btn--huge {
+        @include font-size(18px, "none");
+        padding: ($btn-padding--small - $btn-border-width) ($btn-padding--huge - $btn-border-width); /* [7] */
+    }
+}
+
+
+
+@if ($enable-btn--full == true) {
+    /**
+     * Full-width buttons.
+     */
+    .btn--full,
+    %btn--full {
+        width: 100%;
+    }
+}
+
+
+
+@if ($enable-btn--pill == true) {
+    /**
+     * Round-ended buttons.
+     *
+     * 1. Overly-large value to ensure the radius rounds the whole end of the
+     *    button.
+     */
+    .btn--pill,
+    %btn--pill {
+        border-radius: 100px; /* [1] */
+    }
+}
+
+
+
+@if ($enable-btn--transparent == true) {
+    /**
+     * Transparent button
+     */
+    .btn--transparent,
+    %btn--transparent {
+        @include pseudo-classes(true) {
+            color: $color-base-text;
+            background-color: transparent;
+        }
+    }
+}
+
+
+
+@if ($enable-btn--center == true) {
+    /**
+     * Centered button
+     */
+    .btn--center,
+    %btn--center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
+@if ($enable-btn--secondary == true) {
+    /**
+     * Secondary button
+     */
+    .btn--secondary,
+    %btn--secondary {
+        @include pseudo-classes(true) {
+            color: $color-btn-secondary;
+            background-color: $color-btn-secondary-background;
+            border-color: $color-btn-secondary-border;
+        }
+    }
+}
+
+
+
+@if ($enable-btn--close == true) {
+    /**
+     * Close button
+     */
+    .btn--close {
+        @extend %btn;
+        @include font-size(14px, "none");
+        position: absolute;
+        top: $base-spacing-unit--tiny;
+        right: $base-spacing-unit--tiny;
+        padding-right: $base-spacing-unit--small;
+        padding-left: $base-spacing-unit--small;
+
+        &::after {
+            display: inline-block;
+            margin-left: em(10px);
+            content: $glyph-cross;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #LIST-INLINE
+//
+// The list-inline object simply displays a list of items in one line.
+// ------------------------------------------------------------------------- //
+
+
+
+/// Modifiers
+$enable-list-inline--delimited:     true;
+
+
+// Settings
+$list-inline-delimit-character:     $glyph-no-break-space + $glyph-vertical-line + $glyph-no-break-space;
+
+
+
+/**
+ * List-inline object
+ */
+.list-inline,
+%list-inline {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    > li {
+        display: inline-block;
+    }
+}
+
+
+
+@if ($enable-list-inline--delimited == true) {
+    /**
+     * Comma delimited list to semantically mark up lists of tags, etc.
+     *
+     * N.B. This component requires that you remove the whitespace between LIs.
+     *      The simplest (and valid) way to achieve this is by omitting the
+     *      closing `</li>` tag.
+     */
+    .list-inline--delimited,
+    %list-inline--delimited {
+
+        > li + li {
+
+            &::before {
+                content: "#{$list-inline-delimit-character}";
+            }
+        }
+    }
+}

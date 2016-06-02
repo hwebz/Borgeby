@@ -1,0 +1,72 @@
+﻿/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #FORMS
+// ------------------------------------------------------------------------- //
+
+
+
+/*
+ * 1. Prevent touch delay on touch devices (https://adactio.com/journal/10019)
+ */
+input,
+select,
+textarea,
+label {
+    touch-action: manipulation; /* [1] */
+}
+
+
+input[type=text],
+input[type=password],
+input[type=select],
+input[type=color],
+input[type=date],
+input[type=datetime],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=range],
+input[type=search],
+input[type=tel],
+input[type=time],
+input[type=url],
+input[type=week],
+textarea,
+select {
+    display: block;
+    width: 100%;
+    padding: $base-spacing-unit--tiny;
+    margin-bottom: $base-spacing-unit--small;
+    color: $color-form;
+    background-color: $color-form-background;
+    border: em(1px) solid $color-form-border;
+    border-radius: $base-round-unit;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+    &:focus {
+        border-color: $color-form-border-focus;
+    }
+}
+
+
+input[type=checkbox],
+input[type=radio] {
+    margin-bottom: $base-spacing-unit--small;
+    margin-right: $base-spacing-unit--tiny;
+}
+
+
+label {
+    display: inline-block;
+    margin-bottom: $base-spacing-unit--tiny;
+}
+
+
+fieldset {
+    padding-top: $base-spacing-unit--tiny;
+    padding-left: $base-spacing-unit--small;
+    border-color: $color-form-fieldset-border;
+    border-radius: $base-round-unit;
+}

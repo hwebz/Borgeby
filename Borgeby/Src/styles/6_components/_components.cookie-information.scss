@@ -1,0 +1,59 @@
+﻿/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #COOKIE-INFORMATION
+//
+// Section that displays cookie information.
+// ------------------------------------------------------------------------- //
+
+
+
+/**
+ * Cookie information component
+ */
+.cookie-information {
+    display: none;
+    width: 100%;
+    font-weight: normal;
+    color: $color-white;
+    background-color: $color-gray-mine-shaft;
+    border-bottom: em(1px) solid gray;
+}
+
+
+
+.cookie-information__link {
+    @include pseudo-classes(true) {
+        color: $color-white;
+        text-decoration: underline;
+        font-weight: normal;
+    }
+}
+
+
+
+.cookie-information__button {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+
+    @include media-query("tablet") {
+        display: inline-block;
+        width: auto;
+    }
+}
+
+
+
+.cookie-information__flag-body {
+    @include media-query("tablet") {
+        padding-left: $base-spacing-unit--huge;
+        padding-right: $base-spacing-unit--huge;
+    }
+}
+
+
+
+.cookie-information__flag-img {
+    margin-top: $base-spacing-unit;
+}

@@ -1,0 +1,38 @@
+﻿/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #HIDE
+// ------------------------------------------------------------------------- //
+
+
+
+/**
+ * Utility class for hiding elements.
+ * Extend the class with Sass to avoid the `.u-hide` class appearing
+ * over and over in your markup.
+ */
+%u-hide,
+.u-hide {
+    display: none !important;
+}
+
+
+// Loop over our breakpoints defined in _settings.grid.scss and generate
+// hide utility classes for each breakpoint.
+@each $breakpoint in $breakpoints {
+
+    // Get the name of the breakpoint.
+    $alias: nth($breakpoint, 1);
+
+    @include media-query($alias) {
+        /**
+         * Hide elements on certain breakpoints based on your responsive settings.
+         * Extend the class with Sass to avoid the `.u-hide-tablet` class or similar
+         * appearing over and over in your markup.
+         */
+        %u-hide-#{$alias},
+        .u-hide-#{$alias} {
+            display: none !important;
+        }
+    }
+}

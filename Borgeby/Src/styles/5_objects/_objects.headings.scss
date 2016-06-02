@@ -1,0 +1,98 @@
+﻿/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #HEADINGS
+//
+// Headings 1–6’s corresponding Greek-alphabet abstract classes for
+// double-stranded heading hierarchy:
+// http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
+//
+// Use these helper classes to cause other elements to adopt the styling
+// of the respective heading, e.g.:
+//
+// <h2 class="alpha">Lorem ipsum</h2>
+// ------------------------------------------------------------------------- //
+
+
+
+/**
+ * Heading 1 corresponding class
+ */
+.alpha,
+%alpha {
+    @include font-size($heading-size-1);
+
+    @include media-query("tablet") {
+        @include font-size($heading-size-1-tablet);
+    }
+}
+
+
+
+/**
+ * Heading 2 corresponding class
+ */
+.beta,
+%beta {
+    @include font-size($heading-size-2);
+
+    @include media-query("tablet") {
+        @include font-size($heading-size-2-tablet);
+    }
+}
+
+
+
+/**
+ * Heading 3 corresponding class
+ */
+.gamma,
+%gamma {
+    @include font-size($heading-size-3);
+
+    @include media-query("tablet") {
+        @include font-size($heading-size-3-tablet);
+    }
+}
+
+
+
+/**
+ * Heading 4 corresponding class
+ */
+.delta,
+%delta {
+    @include font-size($heading-size-4);
+
+    @include media-query("tablet") {
+        @include font-size($heading-size-4-tablet);
+    }
+}
+
+
+
+/**
+ * Heading 5 corresponding class
+ */
+.epsilon,
+%epsilon {
+    @include font-size($heading-size-5);
+
+    @include media-query("tablet") {
+        @include font-size($heading-size-5-tablet);
+    }
+}
+
+
+
+/**
+ * Heading 6 corresponding class
+ */
+.zeta,
+%zeta {
+    @include font-size($heading-size-6);
+
+    @include media-query("tablet") {
+        @include font-size($heading-size-6-tablet);
+    }
+}

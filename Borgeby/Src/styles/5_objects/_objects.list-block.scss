@@ -1,0 +1,102 @@
+/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #LIST-BLOCK
+//
+// The list-block object creates blocky list items out of a `ul` or `ol`.
+// ------------------------------------------------------------------------- //
+
+
+
+// Padding
+$list-block-padding:            $base-spacing-unit;
+$list-block-padding--tiny:      quarter($list-block-padding);
+$list-block-padding--small:     halve($list-block-padding);
+$list-block-padding--large:     double($list-block-padding);
+$list-block-padding--huge:      quadruple($list-block-padding);
+
+
+// Modifiers
+$enable-list-block--tiny:       false;
+$enable-list-block--small:      false;
+$enable-list-block--large:      false;
+$enable-list-block--huge:       false;
+
+
+
+/**
+ * List-block object
+ */
+.list-block,
+%list-block {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    > li {
+        @extend %list-block__item;
+    }
+}
+
+.list-block__item,
+%list-block__item {
+    padding: $list-block-padding;
+}
+
+
+
+@if ($enable-list-block--tiny == true) {
+    /**
+     * Tiny list-blocks.
+     */
+    .list-block--tiny,
+    %list-block--tiny {
+
+        > .list-block__item,
+        > %list-block__item {
+            padding: $list-block-padding--tiny;
+        }
+    }
+}
+
+@if ($enable-list-block--small == true) {
+    /**
+     * Small list-blocks.
+     */
+    .list-block--small,
+    %list-block--small {
+
+        > .list-block__item,
+        > %list-block__item {
+            padding: $list-block-padding--small;
+        }
+    }
+}
+
+@if ($enable-list-block--large == true) {
+    /**
+     * Large list-blocks.
+     */
+    .list-block--large,
+    %list-block--large {
+
+        > .list-block__item,
+        > %list-block__item {
+            padding: $list-block-padding--large;
+        }
+    }
+}
+
+@if ($enable-list-block--huge == true) {
+    /**
+     * Huge list-blocks.
+     */
+    .list-block--huge,
+    %list-block--huge {
+
+        > .list-block__item,
+        > %list-block__item {
+            padding: $list-block-padding--huge;
+        }
+    }
+}

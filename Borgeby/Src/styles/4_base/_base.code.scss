@@ -1,0 +1,62 @@
+﻿/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #CODE
+// ------------------------------------------------------------------------- //
+
+
+
+code,
+kbd,
+samp,
+pre {
+    font-family: $font-monospace;
+    font-style: normal;
+    border-radius: $base-round-unit;
+}
+
+
+code,
+kbd {
+    @include font-size(14px);
+    padding: em(2px) $base-spacing-unit--tiny;
+}
+
+
+code {
+    color: $color-code;
+    background-color: $color-code-background;
+}
+
+
+kbd {
+    color: $color-kbd;
+    background-color: $color-kbd-background;
+}
+
+
+pre {
+    padding: $base-spacing-unit--small;
+    overflow: auto;
+    color: $color-pre;
+    white-space: pre;
+    word-wrap: normal;
+    background-color: $color-pre-background;
+
+    code,
+    kbd {
+        padding: 0;
+    }
+}
+
+
+samp {
+    color: $color-samp;
+    background-color: $color-samp-background;
+}
+
+
+var {
+    color: $color-var;
+    background-color: $color-var-background;
+}

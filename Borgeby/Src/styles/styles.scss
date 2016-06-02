@@ -1,0 +1,91 @@
+﻿// ------------------------------------------------------------------------- //
+// #STYLES
+//
+// Bundle for all scss files.
+// No styles should be written in this file!
+// ------------------------------------------------------------------------- //
+
+
+
+// Some of our functions are used in the settings layer, and therefore we must
+// include the functions file first. This is against the ITCSS architecture,
+// but since the functions are not writing anything to the compiled css files,
+// we can live with that. The option is to duplicate the functions in our
+// settings files, which is not good either.
+@import "2_tools/_tools.functions";
+
+
+// SETTINGS
+@import "1_settings/_settings.colors";
+@import "1_settings/_settings.fonts";
+@import "1_settings/_settings.globals";
+@import "1_settings/_settings.headings";
+@import "1_settings/_settings.responsive";
+@import "1_settings/_settings.z-index";
+
+
+// TOOLS
+@import "2_tools/_tools.glyphs";
+@import "2_tools/_tools.mixins";
+@import "2_tools/_tools.sprites";
+
+
+// GENERIC
+@import "3_generic/_generic.normalize";
+@import "3_generic/_generic.reset";
+@import "3_generic/_generic.box-sizing";
+@import "3_generic/_generic.shared";
+
+
+// BASE
+@import "4_base/_base.buttons";
+@import "4_base/_base.code";
+@import "4_base/_base.forms";
+@import "4_base/_base.headings";
+@import "4_base/_base.images";
+@import "4_base/_base.links";
+@import "4_base/_base.lists";
+@import "4_base/_base.page";
+@import "4_base/_base.quotes";
+@import "4_base/_base.tables";
+@import "4_base/_base.typography";
+
+
+// OBJECTS
+@import "5_objects/_objects.block";
+@import "5_objects/_objects.box";
+@import "5_objects/_objects.buttons";
+@import "5_objects/_objects.flag";
+@import "5_objects/_objects.forms";
+@import "5_objects/_objects.headings";
+@import "5_objects/_objects.images";
+@import "5_objects/_objects.layout";
+@import "5_objects/_objects.list-bare";
+@import "5_objects/_objects.list-block";
+@import "5_objects/_objects.list-inline";
+@import "5_objects/_objects.list-ui";
+@import "5_objects/_objects.media";
+@import "5_objects/_objects.pack";
+@import "5_objects/_objects.paging";
+@import "5_objects/_objects.paragraphs";
+@import "5_objects/_objects.tables";
+@import "5_objects/_objects.tabs";
+@import "5_objects/_objects.wrappers";
+
+
+// COMPONENTS
+@import "6_components/_components.cookie-information";
+@import "6_components/_components.episerver-forms";
+@import "6_components/_components.main-navigation";
+@import "6_components/_components.owl-carousel";
+@import "6_components/_components.page-footer";
+@import "6_components/_components.page-header";
+
+
+// TRUMPS
+@import "7_trumps/_trumps.clearfix";
+@import "7_trumps/_trumps.episerver";
+@import "7_trumps/_trumps.hide";
+@import "7_trumps/_trumps.utilities";
+@import "7_trumps/_trumps.widths";
+@import "7_trumps/_trumps.print";

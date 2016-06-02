@@ -1,0 +1,15 @@
+﻿/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #EPISERVER
+// ------------------------------------------------------------------------- //
+
+
+
+/**
+ * Hide Live Monitor tracking image to remove bottom margin on page
+ */
+#LiveMonTransparentImage,
+body > noscript {
+    display: none;
+}

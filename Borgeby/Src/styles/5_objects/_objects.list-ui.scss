@@ -1,0 +1,146 @@
+/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #LIST-UI
+//
+// The UI list object creates blocky list items with a keyline separator
+// out of a `ul` or `ol`.
+// ------------------------------------------------------------------------- //
+
+
+
+// Padding
+$list-ui-padding:               $base-spacing-unit;
+$list-ui-padding--tiny:         quarter($list-ui-padding);
+$list-ui-padding--small:        halve($list-ui-padding);
+$list-ui-padding--large:        double($list-ui-padding);
+$list-ui-padding--huge:         quadruple($list-ui-padding);
+
+
+// Modifiers
+$enable-list-ui--tiny:          false;
+$enable-list-ui--small:         false;
+$enable-list-ui--large:         false;
+$enable-list-ui--huge:          false;
+$enable-list-ui--inner:         false;
+
+
+// Settings
+$list-ui-border-width:          em(1px);
+$list-ui-border-style:          solid;
+$list-ui-border-color:          $color-gray-alto;
+
+
+
+/**
+ * List-UI object
+ */
+.list-ui,
+%list-ui,
+.list-ui__item,
+%list-ui__item {
+    border: 0 $list-ui-border-style $list-ui-border-color;
+}
+
+
+
+.list-ui,
+%list-ui {
+    margin: 0;
+    padding: 0;
+    border-top-width: $list-ui-border-width;
+    list-style: none;
+
+    > li {
+        @extend %list-ui__item;
+    }
+}
+
+
+
+.list-ui__item,
+%list-ui__item {
+    padding: $list-ui-padding;
+    border-bottom-width: $list-ui-border-width;
+}
+
+
+
+@if ($enable-list-ui--tiny == true) {
+    /**
+     * Tiny list-uis.
+     */
+    .list-ui--tiny,
+    %list-ui--tiny {
+
+        > .list-ui__item,
+        > %list-ui__item {
+            padding: 0 $list-ui-padding--small;
+        }
+    }
+}
+
+
+
+@if ($enable-list-ui--small == true) {
+    /**
+     * Small list-uis.
+     */
+    .list-ui--small,
+    %list-ui--small {
+
+        > .list-ui__item,
+        > %list-ui__item {
+            padding: $list-ui-padding--tiny $list-ui-padding--small;
+        }
+    }
+}
+
+
+
+@if ($enable-list-ui--large == true) {
+    /**
+     * Large list-uis.
+     */
+    .list-ui--large,
+    %list-ui--large {
+
+        > .list-ui__item,
+        > %list-ui__item {
+            padding: $list-ui-padding--small $list-ui-padding;
+        }
+    }
+}
+
+
+
+@if ($enable-list-ui--huge == true) {
+    /**
+     * Huge list-uis.
+     */
+    .list-ui--huge,
+    %list-ui--huge {
+
+        > .list-ui__item,
+        > %list-ui__item {
+            padding: $list-ui-padding $list-ui-padding;
+        }
+    }
+}
+
+
+
+@if ($enable-list-ui--inner == true) {
+    /**
+     * Remove top and bottom border from list
+     */
+    .list-ui--inner,
+    %list-ui--inner {
+        border-top-width: 0;
+
+        > .list-ui__item:last-child,
+        > %list-ui__item:last-child {
+            border-bottom-width: 0;
+        }
+    }
+}

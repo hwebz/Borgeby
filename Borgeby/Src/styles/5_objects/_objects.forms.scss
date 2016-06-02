@@ -1,0 +1,16 @@
+﻿/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #FORMS
+// ------------------------------------------------------------------------- //
+
+
+
+/**
+ * Form object
+ */
+.form,
+%form {
+    padding: $base-spacing-unit;
+    background-color: $color-gray-alto;
+}

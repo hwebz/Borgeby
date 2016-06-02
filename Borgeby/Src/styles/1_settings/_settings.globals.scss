@@ -1,0 +1,26 @@
+﻿/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #GLOBALS
+//
+// Global settings and spacing units.
+// ------------------------------------------------------------------------- //
+
+
+
+// Base settings (in pixels)
+$base-font-size:                16px;
+$base-line-height:              24px;
+$base-round:                    2px;
+
+
+// Base settings (in em)
+$base-round-unit:               em($base-round);
+
+
+// Base spacing units (in em)
+$base-spacing-unit:             em($base-font-size);
+$base-spacing-unit--tiny:       quarter($base-spacing-unit);
+$base-spacing-unit--small:      halve($base-spacing-unit);
+$base-spacing-unit--large:      double($base-spacing-unit);
+$base-spacing-unit--huge:       quadruple($base-spacing-unit);

@@ -1,0 +1,37 @@
+﻿/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #PAGE
+//
+// The page module is a very high-level module which styles very basic, global,
+// page-level aspects such at the project’s base font-size and line-height.
+// ------------------------------------------------------------------------- //
+
+
+
+/**
+ * 1. Set the default `font-size` and `line-height` for the entire project,
+ *    sourced from our default variables. The `font-size` is calculated to exist
+ *    in ems, the `line-height` is calculated to exist unitlessly.
+ * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 3. Ensure the page always fills at least the entire height of the viewport.
+ * 4. Prevent certain mobile browsers from automatically zooming fonts.
+ * 5. Fonts on OSX will look more consistent with other systems that do not
+ *    render text using sub-pixel anti-aliasing.
+ */
+html {
+    @include font-size($base-font-size); /* [1] */
+    max-width: 100%;
+    min-height: 100%; /* [3] */
+    overflow-x: hidden;
+    overflow-y: scroll; /* [2] */
+    font-family: $font-system-ui;
+    color: $color-base-text;
+    -ms-text-size-adjust: 100%; /* [4] */
+    -webkit-text-size-adjust: 100%; /* [4] */
+    -moz-osx-font-smoothing: grayscale; /* [5] */
+    -webkit-font-smoothing: antialiased; /* [5] */
+    background-color: $color-base-background;
+}

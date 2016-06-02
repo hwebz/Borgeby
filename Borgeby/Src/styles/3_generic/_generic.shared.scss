@@ -1,0 +1,59 @@
+/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #SHARED
+//
+// The shared module contains several high-level rulesets which
+// apply a consistent, shared declaration (typically margins) across a
+// number of elements.
+// ------------------------------------------------------------------------- //
+
+
+
+/**
+ * Set custom outline color for all elements
+ */
+* {
+    outline-color: $color-link-outline;
+}
+
+
+
+/**
+ * Where `margin-bottom` is concerned,this value will be the same as the
+ * base line-height. This allows us to keep a consistent vertical rhythm.
+ * http://csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+blockquote,
+p,
+address,
+hr,
+table,
+fieldset,
+figure,
+pre,
+%margin-bottom {
+    margin-bottom: $base-spacing-unit;
+}
+
+
+
+/**
+ * Where `margin-left` is concerned we want to try and indent certain elements
+ * by a consistent amount. Define that amount once, here.
+ */
+ul,
+ol,
+dd,
+%margin-left {
+    margin-left: $base-spacing-unit--large;
+}

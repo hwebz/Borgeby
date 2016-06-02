@@ -1,0 +1,77 @@
+﻿@import "dist/styles.min.css";
+
+/* ------------------------------------------------------------------------- //
+// #EDITOR STYLES FOR TINYMCE
+// ------------------------------------------------------------------------- */
+
+
+
+/**
+ * Headings
+ */
+h2 {
+    EditMenuTitle: "Rubriker";
+    EditMenuName: "Nivå 2";
+}
+
+h3 {
+    EditMenuName: "Nivå 3";
+}
+
+h4 {
+    EditMenuName: "Nivå 4";
+}
+
+h5 {
+    EditMenuName: "Nivå 5";
+}
+
+h6 {
+    EditMenuName: "Nivå 6";
+}
+
+
+/**
+ * Typography
+ */
+small {
+    EditMenuTitle: "Text";
+    EditMenuName: "Liten text";
+}
+
+mark {
+    EditMenuName: "Markerad text";
+}
+
+abbr {
+    EditMenuName: "Förkortning";
+}
+
+del {
+    EditMenuName: "Borttagen text";
+}
+
+ins {
+    EditMenuName: "Tillagd text";
+}
+
+sup {
+    EditMenuName: "Upphöjd text";
+}
+
+sub {
+    EditMenuName: "Nedsänkt text";
+}
+
+
+/**
+ * Quotes
+ */
+q {
+    EditMenuTitle: "Citat";
+    EditMenuName: "Kort citat";
+}
+
+blockquote {
+    EditMenuName: "Långt citat";
+}
