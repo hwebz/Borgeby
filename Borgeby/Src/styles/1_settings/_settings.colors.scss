@@ -16,10 +16,12 @@ $color-gray-mine-shaft:             rgb(61, 61, 61);
 $color-gray-alto:                   rgb(222, 222, 222);
 $color-yellow-portafino:            rgb(255, 255, 173);
 
+$color-gray-desert-storm:           rgb(239, 238, 236);
+
 
 // Base
 $color-base-text:                   $color-black;
-$color-base-background:             $color-white;
+$color-base-background:             $color-gray-desert-storm;
 
 
 // Links
@@ -84,4 +86,4 @@ $color-site-navigation:             $color-base-text;
 
 // Page footer
 $color-page-footer:                 $color-white;
-$color-page-footer-background:      $color-gray-mine-shaft;
+$color-page-footer-background:      $color-gray-desert-storm;

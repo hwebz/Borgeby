@@ -18,13 +18,17 @@ $block-gutter--huge:        quadruple($block-gutter);
 
 
 // Modifiers
-$enable-block--flush:       false;
+$enable-block--flush:       true;
 $enable-block--tiny:        false;
 $enable-block--small:       false;
 $enable-block--large:       false;
 $enable-block--huge:        false;
 $enable-block--center:      false;
 $enable-block--right:       false;
+
+
+// Settings
+$block-background-color:    $color-white;
 
 
 
@@ -34,6 +38,7 @@ $enable-block--right:       false;
 .block,
 %block {
     display: block;
+    background-color: $block-background-color;
 }
 
 

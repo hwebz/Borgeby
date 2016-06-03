@@ -20,8 +20,13 @@ $box-padding--huge:         quadruple($box-padding);
 $enable-box--flush:         false;
 $enable-box--tiny:          false;
 $enable-box--small:         false;
-$enable-box--large:         false;
+$enable-box--large:         true;
 $enable-box--huge:          false;
+$enable-box--center:        true;
+
+
+// Settings
+$box-background-color:      $color-white;
 
 
 
@@ -35,6 +40,7 @@ $enable-box--huge:          false;
     @extend %clearfix;
     display: block; /* [1] */
     padding: $box-padding;
+    background-color: $box-background-color;
 
     > :last-child {
         margin-bottom: 0;
@@ -98,5 +104,17 @@ $enable-box--huge:          false;
     .box--huge,
     %box--huge {
         padding: $box-padding--huge;
+    }
+}
+
+
+
+@if ($enable-box--center == true) {
+    /**
+     * Center-aligned blocks.
+     */
+    .box--center,
+    %box--center {
+        text-align: center;
     }
 }
