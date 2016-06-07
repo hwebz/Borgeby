@@ -44,6 +44,7 @@ $media-collapse-at:             $breakpoint-tablet-start;
 .media__img,
 %media__img {
     float: left;
+    max-width: 60%;
     margin-right: $media-gutter;
 
     > img {
@@ -240,6 +241,8 @@ $media-collapse-at:             $breakpoint-tablet-start;
             > .media__img,
             > %media__img {
                 float: none;
+                width: 100%;
+                max-width: none;
                 margin-right: 0;
                 margin-bottom: $media-gutter;
                 margin-left: 0;

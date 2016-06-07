@@ -43,7 +43,7 @@
 
         <header class="page-header"></header>
 
-        <main role="main">
+        <main id="main" role="main">
 
             <div class="layout  layout--large  layout--flex">
 
@@ -99,12 +99,12 @@
                                     Service
                                 </p>
                                 <p>
-                                    <a href="">
+                                    <a class="js-dialog" href="assets/images/maskin-valtra-esales.png" target="_blank" data-dialog="esales-dialog">
                                         Köp reservdel
                                     </a>
                                 </p>
                                 <p>
-                                    <a href="">
+                                    <a class="js-dialog" href="assets/images/maskin-valtra-serviceanlaggningar.png" target="_blank" data-dialog="service-dialog">
                                         Hitta serviceanläggning
                                     </a>
                                 </p>
@@ -119,7 +119,7 @@
                                     Manualer & instruktioner
                                 </p>
                                 <p>
-                                    <a href="">
+                                    <a class="js-dialog" href="assets/images/maskin-valtra-manual.png" target="_blank" data-dialog="manual-dialog">
                                         Manual T-serien Verso
                                     </a>
                                 </p>
@@ -136,7 +136,7 @@
                     <div class="box  box--flush  box--full">
 
                         <div class="media  media--responsive">
-                            <div class="media__img" style="max-width: 60%;">
+                            <div class="media__img">
                                 <img src="http://dummyimage.com/600x400/000/fff" alt="" />
                             </div>
                             <div class="media__body">
@@ -166,6 +166,118 @@
     </div>
 
 
+    <div class="dialog  dialog--large" aria-hidden="true" id="esales-dialog">
+        <div class="dialog__overlay" tabindex="-1" data-a11y-dialog-hide></div>
+        <div class="dialog__content" aria-label="Köp reservdelar till Valtra" role="dialog">
+            <div role="document">
+                <img src="assets/images/maskin-valtra-esales.png" alt="Valtra E-Sales" />
+                <button class="dialog__close" data-a11y-dialog-hide  title="Stäng fönstret">&times;</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="dialog" aria-hidden="true" id="manual-dialog">
+        <div class="dialog__overlay" tabindex="-1" data-a11y-dialog-hide></div>
+        <div class="dialog__content" aria-label="Användarmanual T-Serien Versu" role="dialog">
+            <div role="document">
+                <img src="assets/images/maskin-valtra-manual.png" alt="Användarmanual T-Serien Versu" />
+                <button class="dialog__close" data-a11y-dialog-hide title="Stäng fönstret">&times;</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="dialog  dialog--large" aria-hidden="true" id="service-dialog">
+        <div class="dialog__overlay" tabindex="-1" data-a11y-dialog-hide></div>
+        <div class="dialog__content" aria-label="Hitta serviceanläggning" role="dialog">
+            <div role="document">
+
+                <div class="layout">
+                    <div class="layout__item  u-1/1">
+                        <p>
+                            Min serviceanläggning
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="layout  layout--large">
+
+                    <div class="layout__item  u-1/1  u-3/5-tablet">
+
+                        <img src="assets/images/maskin-valtra-serviceanlaggningar.png" alt="Karta med serviceanläggningar" />
+
+                    </div>
+
+                    <div class="layout__item  u-1/1  u-2/5-tablet">
+
+                        <div class="layout  layout--large">
+
+                            <div class="layout__item  u-1/1">
+
+                                <div class="box  box--border">
+                                    <p>
+                                        Service för:
+                                    </p>
+                                    <table class="table">
+                                        <tr>
+                                            <td>
+                                                Märke:
+                                            </td>
+                                            <td>
+                                                Valtra
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Modell:
+                                            </td>
+                                            <td>
+                                                T4 Versu
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Serienr:
+                                            </td>
+                                            <td>
+                                                123456789
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <button type="button" class="btn">
+                                        Bli kontaktad av serviceanläggning
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="layout__item  u-1/1">
+
+                                <div class="box  box--border">
+                                    <p>
+                                        Välj annan serviceanläggning:
+                                    </p>
+                                    <select>
+                                        <option>Skurup</option>
+                                        <option>Annan</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <button class="dialog__close" data-a11y-dialog-hide title="Stäng fönstret">&times;</button>
+            </div>
+        </div>
+    </div>
+
+
     <!-- jQuery CDN + local fallback  -->
     <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
     <script>window.jQuery || document.write('<script src="/Dist/assets/scripts/vendor/jquery.min.js">\x3C/script>');</script>
@@ -179,6 +291,9 @@
     <!-- Flickity carousel CDN + local fallback -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.2.1/flickity.pkgd.min.js"></script>
     <script>Flickity || document.write('<script src="/Static/scripts/vendor/flickity.pkgd.min.js">\x3C/script>');</script>
+
+    <!-- A11y Dialog (not available from CDN -->
+    <script src="assets/scripts/vendor/a11y-dialog.js"></script>
 
 
     <!-- Tota11y.js accessibility tool -->

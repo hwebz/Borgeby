@@ -9,25 +9,30 @@
 
 
 // Padding
-$box-padding:               $base-spacing-unit;
-$box-padding--tiny:         quarter($box-padding);
-$box-padding--small:        halve($box-padding);
-$box-padding--large:        double($box-padding);
-$box-padding--huge:         quadruple($box-padding);
+$box-padding: $base-spacing-unit;
+$box-padding--tiny: quarter($box-padding);
+$box-padding--small: halve($box-padding);
+$box-padding--large: double($box-padding);
+$box-padding--huge: quadruple($box-padding);
 
 
 // Modifiers
-$enable-box--flush:         true;
-$enable-box--full:          true;
-$enable-box--tiny:          false;
-$enable-box--small:         false;
-$enable-box--large:         true;
-$enable-box--huge:          false;
-$enable-box--center:        true;
+$enable-box--flush: true;
+$enable-box--full: true;
+$enable-box--tiny: false;
+$enable-box--small: false;
+$enable-box--large: true;
+$enable-box--huge: false;
+$enable-box--center: true;
+$enable-box--border: true;
 
 
 // Settings
-$box-background-color:      $color-white;
+$box-background-color: $color-white;
+$box-border-width: 1px;
+$box-border-style: solid;
+$box-border-color: $color-black;
+$box-border-round: 0;
 
 
 
@@ -68,7 +73,7 @@ $box-background-color:      $color-white;
      */
     .box--full,
     %box--full {
-        width: 100%
+        width: 100%;
     }
 }
 
@@ -129,5 +134,21 @@ $box-background-color:      $color-white;
     .box--center,
     %box--center {
         text-align: center;
+    }
+}
+
+
+
+@if ($enable-box--border == true) {
+    /**
+     * Bordered blocks.
+     */
+    .box--border,
+    %box--border {
+        border: $box-border-width $box-border-style $box-border-color;
+
+        @if ($box-border-round != 0) {
+            border-radius: $box-border-round;
+        }
     }
 }

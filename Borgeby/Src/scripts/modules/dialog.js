@@ -1,5 +1,5 @@
 ﻿/*------------------------------------*\
-    #PRINT
+    #DIALOG
 \*------------------------------------*/
 
 
@@ -15,9 +15,9 @@ borgeby.modules = borgeby.modules || {};
 
 
 /**
- * Print module
+ * Dialog module
  */
-borgeby.modules.print = (function () {
+borgeby.modules.dialog = (function () {
     var priv = {};
 
 
@@ -26,23 +26,35 @@ borgeby.modules.print = (function () {
      */
     priv.init = function () {
         priv.bindEvents();
-    };
+    }
 
 
     /**
      * Bind events
      */
     priv.bindEvents = function () {
-        $(".js-print").on("click", function (e) {
-            e.preventDefault();
-            window.print();
+
+        /**
+         * Click on collapse control
+         */
+        $(".js-dialog").on("click", function (event) {
+            var dialogId = $(this).data("dialog");
+            var dialogEl = document.getElementById(dialogId);
+            var dialog = new A11yDialog(dialogEl);
+
+            // Prevent default link behaviour
+            event.preventDefault();
+
+            // Show dialog
+            dialog.show();
+
         });
+
     };
 
 
-    // Initialize module
+    // Initialize private methods
     $(function () {
         priv.init();
     });
-
 })();

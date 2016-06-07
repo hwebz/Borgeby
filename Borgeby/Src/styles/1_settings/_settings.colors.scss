@@ -10,8 +10,8 @@
 // Palette
 $color-black:                       rgb(0, 0, 0);
 $color-white:                       rgb(255, 255, 255);
-$color-red-monza:                   rgb(153, 31, 61);
-$color-red-claret:                  rgb(118, 25, 48);
+$color-blue-curious:                rgb(22, 155, 213);
+$color-blue-chill:                  rgb(18, 120, 164);
 $color-gray-mine-shaft:             rgb(61, 61, 61);
 $color-gray-alto:                   rgb(222, 222, 222);
 $color-yellow-portafino:            rgb(255, 255, 173);
@@ -25,18 +25,18 @@ $color-base-background:             $color-gray-desert-storm;
 
 
 // Links
-$color-link:                        $color-red-monza;
-$color-link-hover:                  $color-red-claret;
-$color-link-outline:                $color-red-monza;
+$color-link:                        $color-blue-curious;
+$color-link-hover:                  $color-blue-chill;
+$color-link-outline:                $color-blue-curious;
 
 
 // Buttons
 $color-btn-primary:                 $color-white;
-$color-btn-primary-background:      $color-red-monza;
-$color-btn-primary-border:          $color-red-monza;
-$color-btn-secondary:               $color-white;
-$color-btn-secondary-background:    $color-gray-mine-shaft;
-$color-btn-secondary-border:        $color-gray-mine-shaft;
+$color-btn-primary-background:      $color-blue-curious;
+$color-btn-primary-border:          $color-blue-curious;
+$color-btn-secondary:               $color-black;
+$color-btn-secondary-background:    $color-gray-alto;
+$color-btn-secondary-border:        $color-gray-alto;
 
 
 // Typography
@@ -45,7 +45,7 @@ $color-hr:                          $color-gray-alto;
 
 
 // Code
-$color-code:                        $color-red-monza;
+$color-code:                        $color-blue-curious;
 $color-code-background:             $color-gray-alto;
 $color-kbd:                         $color-white;
 $color-kbd-background:              $color-gray-mine-shaft;

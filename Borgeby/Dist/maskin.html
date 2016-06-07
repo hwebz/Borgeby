@@ -43,7 +43,7 @@
 
         <header class="page-header"></header>
 
-        <main role="main">
+        <main id="main" role="main">
 
             <div class="layout  layout--large">
 
@@ -59,7 +59,7 @@
                                 <div class="block__body">
                                     <div class="box">
                                         <p>
-                                            <a href="maskiner-valtra.html">
+                                            <a href="maskin-valtra.html">
                                                 Valtra T4 Versu
                                             </a>
                                         </p>
@@ -121,7 +121,7 @@
                                     +
                                 </p>
                                 <p>
-                                    <a href="">
+                                    <a class="js-dialog" href="maskin.html" data-dialog="add-machine-dialog">
                                         Lägg till en ny maskin
                                     </a>
                                 </p>
@@ -157,6 +157,99 @@
     </div>
 
 
+    <div class="dialog  dialog--large  dialog--narrow" aria-hidden="true" id="add-machine-dialog">
+        <div class="dialog__overlay" tabindex="-1" data-a11y-dialog-hide></div>
+        <div class="dialog__content" aria-label="Lägg till ny maskin" role="dialog">
+            <div role="document">
+
+                <p>
+                    Lägg till ny maskin
+                </p>
+
+                <label for="regno_letters">
+                    Registreringsnummer
+                </label>
+                <div class="layout  layout--small">
+                    <div class="layout__item  u-1/4">
+                        <input id="regno_letters" type="text" placeholder="ABC"/>
+                    </div>
+                    <div class="layout__item  u-1/4">
+                        <input id="regno_digits" type="text" placeholder="123" />
+                    </div>
+                </div>
+
+                <div class="layout  layout--small">
+                    <div class="layout__item  u-1/1">
+                        <label for="brand">
+                            Märke
+                        </label>
+                        <select id="brand">
+                            <option>Välj märke</option>
+                            <option>CLAAS</option>
+                            <option>Fendt</option>
+                            <option>Valtra</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="layout  layout--small">
+                    <div class="layout__item  u-1/1">
+                        <label for="model">
+                            Modell
+                        </label>
+                        <select id="model">
+                            <option>Välj modell</option>
+                            <option>T4 Versu</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="layout  layout--small">
+                    <div class="layout__item  u-1/1">
+                        <label for="serialno">
+                            Serienummer
+                        </label>
+                        <input id="serialno" type="text" />
+                    </div>
+                </div>
+
+                <div class="layout  layout--large">
+                    <div class="layout__item  u-1/1">
+                        <label for="producttype">
+                            Produkttyp
+                        </label>
+                        <select id="producttype">
+                            <option>Välj produkttyp</option>
+                            <option>Gödselspridare</option>
+                            <option>Traktor</option>
+                            <option>Tröska</option>
+                            <option>Vagn</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="layout  layout--small">
+                    <div class="layout__item  u-1/4">
+                        <button class="btn  btn--secondary" type="button">
+                            Avbryt
+                        </button>
+                    </div>
+                    <div class="layout__item  u-3/4">
+                        <button class="btn  btn--secondary" type="button">
+                            Återställ
+                        </button>
+                    </div>
+                    <div class="layout__item  u-1/4">
+                        <button class="btn" type="button">
+                            Spara
+                        </button>
+                    </div>
+                </div>
+
+                <button class="dialog__close" data-a11y-dialog-hide title="Stäng fönstret">&times;</button>
+            </div>
+        </div>
+    </div>
     <!-- jQuery CDN + local fallback  -->
     <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
     <script>window.jQuery || document.write('<script src="/Dist/assets/scripts/vendor/jquery.min.js">\x3C/script>');</script>
@@ -170,6 +263,10 @@
     <!-- Flickity carousel CDN + local fallback -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.2.1/flickity.pkgd.min.js"></script>
     <script>Flickity || document.write('<script src="/Static/scripts/vendor/flickity.pkgd.min.js">\x3C/script>');</script>
+
+
+    <!-- A11y Dialog (not available from CDN -->
+    <script src="assets/scripts/vendor/a11y-dialog.js"></script>
 
 
     <!-- Tota11y.js accessibility tool -->

@@ -4,20 +4,20 @@
 
 
 // References for intellisense
-/// <reference path="/Static/scripts/_references.js" />
+/// <reference path="/Src/scripts/_references.js" />
 
 
 
 // Namespace
-window.emptyepi = window.emptyepi || {};
-emptyepi.modules = emptyepi.modules || {};
+window.borgeby = window.borgeby || {};
+borgeby.modules = borgeby.modules || {};
 
 
 
 /**
  * Collapse module
  */
-emptyepi.modules.collapse = (function () {
+borgeby.modules.collapse = (function () {
     var priv = {};
     var browserWidth;
     var resizeTimer;

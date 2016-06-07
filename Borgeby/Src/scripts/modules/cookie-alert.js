@@ -4,20 +4,20 @@
 
 
 // References for intellisense
-/// <reference path="/Static/scripts/_references.js" />
+/// <reference path="/Src/scripts/_references.js" />
 
 
 
 // Namespace
-window.emptyepi = window.emptyepi || {};
-emptyepi.modules = emptyepi.modules || {};
+window.borgeby = window.borgeby || {};
+borgeby.modules = borgeby.modules || {};
 
 
 
 /**
  * Cookie alert module
  */
-emptyepi.modules.cookieAlert = (function () {
+borgeby.modules.cookieAlert = (function () {
     var priv = {};
 
 
@@ -35,7 +35,7 @@ emptyepi.modules.cookieAlert = (function () {
      */
     priv.bindEvents = function () {
         $(".js-accept-cookies").on("click", function () {
-            emptyepi.modules.cookies.set("cookiesAccepted", true, 365);
+            borgeby.modules.cookies.set("cookiesAccepted", true, 365);
             priv.verifyCookieAcceptance();
         });
     };
@@ -45,7 +45,7 @@ emptyepi.modules.cookieAlert = (function () {
      * Verify cookie acceptance
      */
     priv.verifyCookieAcceptance = function () {
-        if (emptyepi.modules.cookies.get("cookiesAccepted"))
+        if (borgeby.modules.cookies.get("cookiesAccepted"))
             priv.hideCookieInformation();
         else
             priv.showCookieInformation();
@@ -57,7 +57,7 @@ emptyepi.modules.cookieAlert = (function () {
      */
     priv.hideCookieInformation = function () {
         if ($(".cookie-information").is(":visible")) {
-            emptyepi.modules.common.hideContent(".cookie-information");
+            borgeby.modules.common.hideContent(".cookie-information");
         }
     };
 

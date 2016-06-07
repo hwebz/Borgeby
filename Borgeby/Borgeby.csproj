@@ -66,15 +66,21 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Dist\assets\images\maskin-valtra-esales.png" />
+    <Content Include="Dist\assets\images\maskin-valtra-manual.png" />
+    <Content Include="Dist\assets\images\maskin-valtra-serviceanlaggningar.png" />
     <Content Include="Dist\assets\images\sprite%402x.png" />
     <Content Include="Dist\assets\images\sprite.png" />
     <Content Include="Dist\assets\scripts\scripts.js" />
     <Content Include="Dist\assets\scripts\scripts.min.js" />
+    <Content Include="Dist\assets\scripts\vendor\a11y-dialog.js" />
+    <Content Include="Dist\assets\scripts\vendor\a11y-dialog.min.js" />
     <Content Include="Dist\assets\scripts\vendor\flickity.pkgd.js" />
     <Content Include="Dist\assets\scripts\vendor\flickity.pkgd.min.js" />
     <Content Include="Dist\assets\styles\styles.css" />
     <Content Include="Dist\assets\styles\styles.min.css" />
-    <Content Include="Dist\maskiner.html" />
+    <Content Include="Dist\maskin-valtra.html" />
+    <Content Include="Dist\maskin.html" />
     <Content Include="Documentation\Frontend\Styles\Sassdoc\assets\css\main.css" />
     <Content Include="Documentation\Frontend\Styles\Sassdoc\assets\images\favicon.png" />
     <Content Include="Documentation\Frontend\Styles\Sassdoc\assets\images\logo_full_compact.svg" />
@@ -101,6 +107,7 @@
     <Content Include="Dist\assets\images\Favicon\manifest.json" />
     <Content Include="Src\Images\Icons\icon-minus-blue%402x.png" />
     <Content Include="Src\Images\Icons\icon-plus-blue%402x.png" />
+    <Content Include="Src\Scripts\modules\dialog.js" />
     <Content Include="Src\Styles\1_settings\_settings.colors.scss" />
     <Content Include="Src\Styles\1_settings\_settings.fonts.scss" />
     <Content Include="Src\Styles\1_settings\_settings.globals.scss" />
@@ -146,7 +153,6 @@
     <Content Include="Src\Styles\5_objects\_objects.tabs.scss" />
     <Content Include="Src\Styles\5_objects\_objects.wrappers.scss" />
     <Content Include="Src\Styles\6_components\_components.cookie-information.scss" />
-    <Content Include="Src\Styles\6_components\_components.episerver-forms.scss" />
     <Content Include="Src\Styles\6_components\_components.main-navigation.scss" />
     <Content Include="Src\Styles\6_components\_components.flickity-carousel.scss" />
     <Content Include="Src\Styles\6_components\_components.page-footer.scss" />
@@ -160,6 +166,7 @@
     <Content Include="Src\Styles\styles.scss" />
     <Content Include="Src\Styles\_references.scss" />
     <Content Include="StyleTemplate\index.html" />
+    <Content Include="Src\Styles\5_objects\_objects.dialog.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

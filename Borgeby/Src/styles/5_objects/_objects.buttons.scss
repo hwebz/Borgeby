@@ -23,7 +23,7 @@ $enable-btn--full:          true;
 $enable-btn--pill:          false;
 $enable-btn--transparent:   false;
 $enable-btn--center:        false;
-$enable-btn--secondary:     false;
+$enable-btn--secondary:     true;
 $enable-btn--close:         false;
 
 
@@ -60,6 +60,7 @@ $btn-border-round:          $base-round-unit;
     background-color: $color-btn-primary-background;
     vertical-align: middle; /* [2] */
     cursor: pointer; /* [5] */
+
     @if ($btn-border-width != 0) {
         border: $btn-border-width $btn-border-style $color-btn-primary-border;
     }

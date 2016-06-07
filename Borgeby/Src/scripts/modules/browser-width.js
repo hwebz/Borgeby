@@ -4,20 +4,20 @@
 
 
 // References for intellisense
-/// <reference path="/Static/scripts/_references.js" />
+/// <reference path="/Src/scripts/_references.js" />
 
 
 
 // Namespace
-window.emptyepi = window.emptyepi || {};
-emptyepi.modules = emptyepi.modules || {};
+window.borgeby = window.borgeby || {};
+borgeby.modules = borgeby.modules || {};
 
 
 
 /**
  * Browser width
  */
-emptyepi.modules.browserWidth = (function () {
+borgeby.modules.browserWidth = (function () {
     var pub = {};
     var browserWidth;
     var scrollbarWidth = 18;

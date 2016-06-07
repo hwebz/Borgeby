@@ -1,0 +1,172 @@
+﻿/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #DIALOG
+//
+// Styling for A11y Dialog
+// https://github.com/edenspiekermann/a11y-dialog
+// ------------------------------------------------------------------------- //
+
+
+
+// Padding
+$dialog-padding: $base-spacing-unit;
+$dialog-padding--tiny: quarter($dialog-padding);
+$dialog-padding--small: halve($dialog-padding);
+$dialog-padding--large: double($dialog-padding);
+$dialog-padding--huge: quadruple($dialog-padding);
+
+
+// Modifiers
+$enable-dialog--flush: true;
+$enable-dialog--tiny: false;
+$enable-dialog--small: false;
+$enable-dialog--large: true;
+$enable-dialog--huge: false;
+$enable-dialog--narrow: true;
+$enable-dialog--wide: true;
+
+
+
+.dialog[aria-hidden="true"] {
+    display: none;
+}
+
+
+
+.dialog__overlay {
+    @include z-index("modal");
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(43, 46, 56, .9);
+}
+
+
+
+.dialog__content {
+    @include z-index("modal-content");
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    padding: $base-spacing-unit;
+    background-color: rgb(255, 255, 255);
+    border-radius: $base-round-unit;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.dialog__close {
+    @include font-size(22px, "none");
+    position: absolute;
+    top: $base-spacing-unit--small;
+    right: $base-spacing-unit--small;
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent;
+    border: 0;
+    transition: .15s;
+    cursor: pointer;
+}
+
+
+
+@if ($enable-dialog--flush == true) {
+    /**
+     * Flush (i.e. no padding) dialog.
+     */
+    .dialog--flush,
+    %dialog--flush {
+        .dialog__content {
+            padding: 0;
+        }
+    }
+}
+
+
+
+@if ($enable-dialog--tiny == true) {
+    /**
+     * Tiny dialog.
+     */
+    .dialog--tiny,
+    %dialog--tiny {
+        .dialog__content {
+            padding: $dialog-padding--tiny;
+        }
+    }
+}
+
+
+
+@if ($enable-dialog--small == true) {
+    /**
+     * Small dialog.
+     */
+    .dialog--small,
+    %dialog--small {
+        .dialog__content {
+            padding: $dialog-padding--small;
+        }
+    }
+}
+
+
+
+@if ($enable-dialog--large == true) {
+    /**
+     * Large dialog.
+     */
+    .dialog--large,
+    %dialog--large {
+        .dialog__content {
+            padding: $dialog-padding--large;
+        }
+    }
+}
+
+
+
+@if ($enable-dialog--huge == true) {
+    /**
+     * Huge dialog.
+     */
+    .dialog--huge,
+    %dialog--huge {
+        .dialog__content {
+            padding: $dialog-padding--huge;
+        }
+    }
+}
+
+
+
+@if ($enable-dialog--narrow == true) {
+    /**
+     * Narrow dialog.
+     */
+    .dialog--narrow,
+    %dialog--narrow {
+        .dialog__content {
+            width: 40%;
+        }
+    }
+}
+
+
+
+@if ($enable-dialog--wide == true) {
+    /**
+     * Wide dialog.
+     */
+    .dialog--wide,
+    %dialog--wide {
+        .dialog__content {
+            width: 80%;
+        }
+    }
+}

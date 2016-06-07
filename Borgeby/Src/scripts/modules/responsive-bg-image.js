@@ -4,20 +4,20 @@
 
 
 // References for intellisense
-/// <reference path="/Static/scripts/_references.js" />
+/// <reference path="/Src/scripts/_references.js" />
 
 
 
 // Namespace
-window.emptyepi = window.emptyepi || {};
-emptyepi.modules = emptyepi.modules || {};
+window.borgeby = window.borgeby || {};
+borgeby.modules = borgeby.modules || {};
 
 
 
 /**
  * Responsive background image
  */
-emptyepi.modules.responsiveBgImage = (function () {
+borgeby.modules.responsiveBgImage = (function () {
     var priv = {};
     var browserWidth;
     var cssBackgroundImage;
@@ -93,16 +93,16 @@ emptyepi.modules.responsiveBgImage = (function () {
             cssBackgroundImage = $(this).css("background-image");
 
             // Check which background image that should be used
-            if (emptyepi.modules.browserWidth.isMobile() && bgMobile !== undefined && !priv.isBackgroundImageSet(bgMobile)) {
+            if (borgeby.modules.browserWidth.isMobile() && bgMobile !== undefined && !priv.isBackgroundImageSet(bgMobile)) {
                 // Mobile
                 priv.setBackgroundImage(this, bgMobile);
-            } else if (emptyepi.modules.browserWidth.isTablet() && bgTablet !== undefined && !priv.isBackgroundImageSet(bgTablet)) {
+            } else if (borgeby.modules.browserWidth.isTablet() && bgTablet !== undefined && !priv.isBackgroundImageSet(bgTablet)) {
                 // Tablet
                 priv.setBackgroundImage(this, bgTablet);
             } else if (
-                (emptyepi.modules.browserWidth.isDesktop() && bgDesktop !== undefined && !priv.isBackgroundImageSet(bgDesktop)) ||
-                (emptyepi.modules.browserWidth.isMobile() && bgMobile === undefined && bgDesktop !== undefined && !priv.isBackgroundImageSet(bgDesktop)) ||
-                (emptyepi.modules.browserWidth.isTablet() && bgTablet === undefined) && bgDesktop !== undefined && !priv.isBackgroundImageSet(bgDesktop)) {
+                (borgeby.modules.browserWidth.isDesktop() && bgDesktop !== undefined && !priv.isBackgroundImageSet(bgDesktop)) ||
+                (borgeby.modules.browserWidth.isMobile() && bgMobile === undefined && bgDesktop !== undefined && !priv.isBackgroundImageSet(bgDesktop)) ||
+                (borgeby.modules.browserWidth.isTablet() && bgTablet === undefined) && bgDesktop !== undefined && !priv.isBackgroundImageSet(bgDesktop)) {
                 // Desktop
                 priv.setBackgroundImage(this, bgDesktop);
             }

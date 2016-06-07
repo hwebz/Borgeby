@@ -55,6 +55,7 @@
 @import "5_objects/_objects.block";
 @import "5_objects/_objects.box";
 @import "5_objects/_objects.buttons";
+@import "5_objects/_objects.dialog";
 @import "5_objects/_objects.flag";
 @import "5_objects/_objects.forms";
 @import "5_objects/_objects.headings";
@@ -75,9 +76,8 @@
 
 // COMPONENTS
 @import "6_components/_components.cookie-information";
-@import "6_components/_components.episerver-forms";
-@import "6_components/_components.main-navigation";
 @import "6_components/_components.flickity-carousel";
+@import "6_components/_components.main-navigation";
 @import "6_components/_components.page-footer";
 @import "6_components/_components.page-header";
 

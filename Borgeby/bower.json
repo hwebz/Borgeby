@@ -10,6 +10,7 @@
     "picturefill": "3.0.2",
     "respondJs": "1.4.2",
     "succinct": "^1.1.0",
-    "tota11y": "^0.1.3"
+    "tota11y": "^0.1.3",
+    "espi-a11y-dialog": "^2.2.0"
   }
 }
