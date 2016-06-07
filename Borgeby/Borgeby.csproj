@@ -74,6 +74,7 @@
     <Content Include="Dist\assets\scripts\vendor\flickity.pkgd.min.js" />
     <Content Include="Dist\assets\styles\styles.css" />
     <Content Include="Dist\assets\styles\styles.min.css" />
+    <Content Include="Dist\maskiner.html" />
     <Content Include="Documentation\Frontend\Styles\Sassdoc\assets\css\main.css" />
     <Content Include="Documentation\Frontend\Styles\Sassdoc\assets\images\favicon.png" />
     <Content Include="Documentation\Frontend\Styles\Sassdoc\assets\images\logo_full_compact.svg" />

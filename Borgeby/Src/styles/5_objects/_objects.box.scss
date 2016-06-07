@@ -17,7 +17,8 @@ $box-padding--huge:         quadruple($box-padding);
 
 
 // Modifiers
-$enable-box--flush:         false;
+$enable-box--flush:         true;
+$enable-box--full:          true;
 $enable-box--tiny:          false;
 $enable-box--small:         false;
 $enable-box--large:         true;
@@ -56,6 +57,18 @@ $box-background-color:      $color-white;
     .box--flush,
     %box--flush {
         padding: 0;
+    }
+}
+
+
+
+@if ($enable-box--full == true) {
+    /**
+     * Full width box box.
+     */
+    .box--full,
+    %box--full {
+        width: 100%
     }
 }
 
