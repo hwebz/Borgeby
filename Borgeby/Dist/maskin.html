@@ -54,7 +54,7 @@
                         <div class="layout__item  u-1/3">
                             <div class="block  block--flush">
                                 <div class="block__img">
-                                    <img src="http://dummyimage.com/600x400/000/fff" alt="" />
+                                    <img src="assets/images/maskin-valtra-t4.jpg" alt="" />
                                 </div>
                                 <div class="block__body">
                                     <div class="box">
@@ -64,7 +64,7 @@
                                             </a>
                                         </p>
                                         <p>
-                                            <a href="">
+                                            <a class="js-dialog" href="maskin-valtra.html" target="_blank" data-dialog="esales-valtra-dialog">
                                                 Köp reservdel
                                             </a>
                                         </p>
@@ -79,13 +79,13 @@
                         <div class="layout__item  u-1/3">
                             <div class="block  block--flush">
                                 <div class="block__img">
-                                    <img src="http://dummyimage.com/600x400/000/fff" alt="" />
+                                    <img src="assets/images/maskin-bogballe-m3w.jpg" alt="" />
                                 </div>
                                 <div class="block__body">
                                     <div class="box">
                                         <p>
-                                            <a href="">
-                                                Bogballe M3W
+                                            <a href="maskin-bogballe.html">
+                                                Bøgballe M3W
                                             </a>
                                         </p>
                                     </div>
@@ -96,17 +96,17 @@
                         <div class="layout__item  u-1/3">
                             <div class="block  block--flush">
                                 <div class="block__img">
-                                    <img src="http://dummyimage.com/600x400/000/fff" alt="" />
+                                    <img src="assets/images/maskin-vaderstad.jpg" alt="" />
                                 </div>
                                 <div class="block__body">
                                     <div class="box">
                                         <p>
-                                            <a href="">
+                                            <a href="maskin-vaderstad.html">
                                                 Väderstad Rapid 300-400C/S
                                             </a>
                                         </p>
                                         <p>
-                                            <a href="">
+                                            <a class="js-dialog" href="maskin-vaderstad.html" target="_blank" data-dialog="esales-vaderstad-dialog">
                                                 Köp reservdel
                                             </a>
                                         </p>
@@ -116,7 +116,7 @@
                         </div>
 
                         <div class="layout__item  u-1/3">
-                            <div class="box  box--large  box--center">
+                            <div class="box  box--large  box--center  box--full">
                                 <p>
                                     +
                                 </p>
@@ -157,6 +157,28 @@
     </div>
 
 
+    <div class="dialog  dialog--large  dialog--wide" aria-hidden="true" id="esales-valtra-dialog">
+        <div class="dialog__overlay" tabindex="-1" data-a11y-dialog-hide></div>
+        <div class="dialog__content" aria-label="Köp reservdelar till Valtra" role="dialog">
+            <div role="document">
+                <img src="assets/images/maskin-valtra-esales.png" alt="Lantmännen Maskin E-handel" />
+                <button class="dialog__close" data-a11y-dialog-hide title="Stäng fönstret">&times;</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="dialog  dialog--large  dialog--wide" aria-hidden="true" id="esales-vaderstad-dialog">
+        <div class="dialog__overlay" tabindex="-1" data-a11y-dialog-hide></div>
+        <div class="dialog__content" aria-label="Köp reservdelar till Valtra" role="dialog">
+            <div role="document">
+                <img src="assets/images/maskin-vaderstad-esales.jpg" alt="Lantmännen Maskin E-handel" />
+                <button class="dialog__close" data-a11y-dialog-hide title="Stäng fönstret">&times;</button>
+            </div>
+        </div>
+    </div>
+
+
     <div class="dialog  dialog--large  dialog--narrow" aria-hidden="true" id="add-machine-dialog">
         <div class="dialog__overlay" tabindex="-1" data-a11y-dialog-hide></div>
         <div class="dialog__content" aria-label="Lägg till ny maskin" role="dialog">
@@ -166,87 +188,89 @@
                     Lägg till ny maskin
                 </p>
 
-                <label for="regno_letters">
-                    Registreringsnummer
-                </label>
-                <div class="layout  layout--small">
-                    <div class="layout__item  u-1/4">
-                        <input id="regno_letters" type="text" placeholder="ABC"/>
-                    </div>
-                    <div class="layout__item  u-1/4">
-                        <input id="regno_digits" type="text" placeholder="123" />
-                    </div>
-                </div>
+                <form>
 
-                <div class="layout  layout--small">
-                    <div class="layout__item  u-1/1">
-                        <label for="brand">
-                            Märke
-                        </label>
-                        <select id="brand">
-                            <option>Välj märke</option>
-                            <option>CLAAS</option>
-                            <option>Fendt</option>
-                            <option>Valtra</option>
-                        </select>
+                    <label for="regno_letters">
+                        Registreringsnummer
+                    </label>
+                    <div class="layout  layout--small">
+                        <div class="layout__item  u-1/4">
+                            <input id="regno_letters" type="text" placeholder="ABC" />
+                        </div>
+                        <div class="layout__item  u-1/4">
+                            <input id="regno_digits" type="text" placeholder="123" />
+                        </div>
                     </div>
-                </div>
 
-                <div class="layout  layout--small">
-                    <div class="layout__item  u-1/1">
-                        <label for="model">
-                            Modell
-                        </label>
-                        <select id="model">
-                            <option>Välj modell</option>
-                            <option>T4 Versu</option>
-                        </select>
+                    <div class="layout  layout--small">
+                        <div class="layout__item  u-1/1">
+                            <label for="brand">
+                                Märke
+                            </label>
+                            <select id="brand">
+                                <option>Välj märke</option>
+                                <option>CLAAS</option>
+                                <option>Fendt</option>
+                                <option>Valtra</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
 
-                <div class="layout  layout--small">
-                    <div class="layout__item  u-1/1">
-                        <label for="serialno">
-                            Serienummer
-                        </label>
-                        <input id="serialno" type="text" />
+                    <div class="layout  layout--small">
+                        <div class="layout__item  u-1/1">
+                            <label for="model">
+                                Modell
+                            </label>
+                            <select id="model">
+                                <option>Välj modell</option>
+                                <option>T4 Versu</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
 
-                <div class="layout  layout--large">
-                    <div class="layout__item  u-1/1">
-                        <label for="producttype">
-                            Produkttyp
-                        </label>
-                        <select id="producttype">
-                            <option>Välj produkttyp</option>
-                            <option>Gödselspridare</option>
-                            <option>Traktor</option>
-                            <option>Tröska</option>
-                            <option>Vagn</option>
-                        </select>
+                    <div class="layout  layout--small">
+                        <div class="layout__item  u-1/1">
+                            <label for="serialno">
+                                Serienummer
+                            </label>
+                            <input id="serialno" type="text" />
+                        </div>
                     </div>
-                </div>
 
-                <div class="layout  layout--small">
-                    <div class="layout__item  u-1/4">
-                        <button class="btn  btn--secondary" type="button">
-                            Avbryt
-                        </button>
+                    <div class="layout  layout--large">
+                        <div class="layout__item  u-1/1">
+                            <label for="producttype">
+                                Produkttyp
+                            </label>
+                            <select id="producttype">
+                                <option>Välj produkttyp</option>
+                                <option>Gödselspridare</option>
+                                <option>Traktor</option>
+                                <option>Tröska</option>
+                                <option>Vagn</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="layout__item  u-3/4">
-                        <button class="btn  btn--secondary" type="button">
-                            Återställ
-                        </button>
-                    </div>
-                    <div class="layout__item  u-1/4">
-                        <button class="btn" type="button">
-                            Spara
-                        </button>
-                    </div>
-                </div>
 
-                <button class="dialog__close" data-a11y-dialog-hide title="Stäng fönstret">&times;</button>
+                    <div class="layout  layout--small">
+                        <div class="layout__item  u-1/1">
+                            <button class="btn  btn--secondary" type="button" data-a11y-dialog-hide>
+                                Avbryt
+                            </button>
+
+                            <button class="btn" type="button" style="float: right; margin-left: 1em;">
+                                Spara
+                            </button>
+
+                            <button class="btn  btn--secondary" type="reset" style="float: right;">
+                                Återställ
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+
+                <button class="dialog__close" title="Stäng fönstret" data-a11y-dialog-hide>&times;</button>
             </div>
         </div>
     </div>
