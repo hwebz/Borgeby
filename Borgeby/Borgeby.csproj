@@ -69,13 +69,14 @@
     <Content Include="Dist\assets\images\maskin-bogballe-m3w.jpg" />
     <Content Include="Dist\assets\images\maskin-bogballe-manual.png" />
     <Content Include="Dist\assets\images\maskin-bogballe-spridartabell.jpg" />
+    <Content Include="Dist\assets\images\maskin-general.jpg" />
     <Content Include="Dist\assets\images\maskin-vaderstad-esales.jpg" />
     <Content Include="Dist\assets\images\maskin-vaderstad-manual.png" />
     <Content Include="Dist\assets\images\maskin-vaderstad-video.jpg" />
     <Content Include="Dist\assets\images\maskin-vaderstad.jpg" />
     <Content Include="Dist\assets\images\maskin-valtra-esales.png" />
     <Content Include="Dist\assets\images\maskin-valtra-manual.png" />
-    <Content Include="Dist\assets\images\maskin-valtra-serviceanlaggningar.png" />
+    <Content Include="Dist\assets\images\maskin-serviceanlaggningar.png" />
     <Content Include="Dist\assets\images\maskin-valtra-t4.jpg" />
     <Content Include="Dist\assets\images\sprite%402x.png" />
     <Content Include="Dist\assets\images\sprite.png" />
@@ -87,6 +88,7 @@
     <Content Include="Dist\assets\scripts\vendor\flickity.pkgd.min.js" />
     <Content Include="Dist\assets\styles\styles.css" />
     <Content Include="Dist\assets\styles\styles.min.css" />
+    <Content Include="Dist\maskin-vaderstad.html" />
     <Content Include="Dist\maskin-bogballe.html" />
     <Content Include="Dist\maskin-valtra.html" />
     <Content Include="Dist\maskin.html" />

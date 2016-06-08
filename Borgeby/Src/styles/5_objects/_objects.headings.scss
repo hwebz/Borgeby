@@ -21,10 +21,6 @@
 .alpha,
 %alpha {
     @include font-size($heading-size-1);
-
-    @include media-query("tablet") {
-        @include font-size($heading-size-1-tablet);
-    }
 }
 
 
@@ -35,10 +31,6 @@
 .beta,
 %beta {
     @include font-size($heading-size-2);
-
-    @include media-query("tablet") {
-        @include font-size($heading-size-2-tablet);
-    }
 }
 
 
@@ -49,10 +41,6 @@
 .gamma,
 %gamma {
     @include font-size($heading-size-3);
-
-    @include media-query("tablet") {
-        @include font-size($heading-size-3-tablet);
-    }
 }
 
 
@@ -63,10 +51,6 @@
 .delta,
 %delta {
     @include font-size($heading-size-4);
-
-    @include media-query("tablet") {
-        @include font-size($heading-size-4-tablet);
-    }
 }
 
 
@@ -77,10 +61,6 @@
 .epsilon,
 %epsilon {
     @include font-size($heading-size-5);
-
-    @include media-query("tablet") {
-        @include font-size($heading-size-5-tablet);
-    }
 }
 
 
@@ -91,8 +71,4 @@
 .zeta,
 %zeta {
     @include font-size($heading-size-6);
-
-    @include media-query("tablet") {
-        @include font-size($heading-size-6-tablet);
-    }
 }
