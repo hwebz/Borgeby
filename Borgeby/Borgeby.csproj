@@ -88,6 +88,8 @@
     <Content Include="Dist\assets\scripts\vendor\flickity.pkgd.min.js" />
     <Content Include="Dist\assets\styles\styles.css" />
     <Content Include="Dist\assets\styles\styles.min.css" />
+    <Content Include="Dist\foder-kommande-tjanster.html" />
+    <Content Include="Dist\foder.html" />
     <Content Include="Dist\odling-kommande-tjanster.html" />
     <Content Include="Dist\odling-sortguide.html" />
     <Content Include="Dist\odling.html" />
