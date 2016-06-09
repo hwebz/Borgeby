@@ -88,6 +88,9 @@
     <Content Include="Dist\assets\scripts\vendor\flickity.pkgd.min.js" />
     <Content Include="Dist\assets\styles\styles.css" />
     <Content Include="Dist\assets\styles\styles.min.css" />
+    <Content Include="Dist\odling-kommande-tjanster.html" />
+    <Content Include="Dist\odling-sortguide.html" />
+    <Content Include="Dist\odling.html" />
     <Content Include="Dist\maskin-vaderstad.html" />
     <Content Include="Dist\maskin-bogballe.html" />
     <Content Include="Dist\maskin-valtra.html" />
