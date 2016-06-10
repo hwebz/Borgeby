@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Maskin | Valtra T234 VERSU</title>
+    <title>Maskin | Valtra T234 Versu</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,7 +56,7 @@
                         <div class="block__body">
                             <div class="box">
                                 <h2>
-                                    Valtra T234 VERSU
+                                    Valtra T234 Versu
                                 </h2>
                             </div>
                         </div>
@@ -66,7 +66,9 @@
 
                 <div class="layout__item  u-2/3">
                     <div class="box  box--flush">
-                        <img src="assets/images/maskin-valtra-driftstimmar.png" alt="" />
+                        <a class="js-dialog" href="assets/images/maskin-valtra-service.png" target="_blank" data-dialog="service-dialog">
+                            <img src="assets/images/maskin-valtra-driftstimmar.png" alt="" />
+                        </a>
                     </div>
                 </div>
 
@@ -98,18 +100,25 @@
                     <img src="assets/images/maskin-valtra-manualer-och-instruktioner.png" alt="" />
 
                     <div class="box  box--full">
-                        <p>
-                            <a class="js-dialog" href="assets/images/maskin-valtra-manual.png" target="_blank" data-dialog="manual-dialog">
-                                Manual T-serien VERSU
-                            </a>
-                        </p>
+                        <a href="assets/images/maskin-valtra-manual.pdf" target="_blank">
+                            <div class="flag">
+                                <div class="flag__img">
+                                    <img src="assets/images/pdf.png" alt="" />
+                                </div>
+                                <div class="flag__body">
+                                    Manual T-serien Versu
+                                </div>
+                            </div>
+                        </a>
                     </div>
 
                 </div>
 
                 <div class="layout__item  u-1/3">
 
-                    <img src="assets/images/maskin-valtra-film.png" alt="" />
+                    <video controls="controls" style="width: 100%;">
+                        <source src="assets/images/maskin-valtra-film.mp4" type="video/mp4" />
+                    </video>
 
                     <div class="box  box--flush  box--full">
 
@@ -140,17 +149,6 @@
         <div class="dialog__content" aria-label="Köp reservdelar till Valtra" role="dialog">
             <div role="document">
                 <img src="assets/images/maskin-valtra-esales.png" alt="Lantmännen Maskin E-handel" />
-                <button class="dialog__close" data-a11y-dialog-hide title="Stäng fönstret">&times;</button>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="dialog  dialog--flush  dialog--wide" aria-hidden="true" id="manual-dialog">
-        <div class="dialog__overlay" tabindex="-1" data-a11y-dialog-hide></div>
-        <div class="dialog__content" aria-label="Användarmanual T-Serien Versu" role="dialog">
-            <div role="document">
-                <img src="assets/images/maskin-valtra-manual.png" alt="Användarmanual T-Serien Versu" />
                 <button class="dialog__close" data-a11y-dialog-hide title="Stäng fönstret">&times;</button>
             </div>
         </div>
