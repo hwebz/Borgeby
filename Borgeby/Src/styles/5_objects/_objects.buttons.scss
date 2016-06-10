@@ -204,6 +204,8 @@ $btn-border-round:          $base-round-unit;
             color: $color-btn-secondary;
             background-color: $color-btn-secondary-background;
             border-color: $color-btn-secondary-border;
+            border-width: 1px;
+            border-style: solid;
         }
     }
 }

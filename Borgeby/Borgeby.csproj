@@ -66,17 +66,29 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Dist\assets\fonts\AkzidenzGroteskBQ-Medium.svg" />
+    <Content Include="Dist\assets\fonts\AkzidenzGroteskBQ-Reg.svg" />
+    <Content Include="Dist\assets\fonts\clarendonurw-reg-webfont.svg" />
+    <Content Include="Dist\assets\fonts\fontawesome-webfont.svg" />
     <Content Include="Dist\assets\images\maskin-bogballe-m3w.jpg" />
     <Content Include="Dist\assets\images\maskin-bogballe-manual.png" />
     <Content Include="Dist\assets\images\maskin-bogballe-spridartabell.jpg" />
+    <Content Include="Dist\assets\images\maskin-driftstimmar.png" />
     <Content Include="Dist\assets\images\maskin-general.jpg" />
+    <Content Include="Dist\assets\images\maskin-lagg-till-popup.png" />
+    <Content Include="Dist\assets\images\maskin-lagg-till.png" />
+    <Content Include="Dist\assets\images\maskin-relaterade-tjanster.png" />
     <Content Include="Dist\assets\images\maskin-vaderstad-esales.jpg" />
     <Content Include="Dist\assets\images\maskin-vaderstad-manual.png" />
     <Content Include="Dist\assets\images\maskin-vaderstad-video.jpg" />
     <Content Include="Dist\assets\images\maskin-vaderstad.jpg" />
+    <Content Include="Dist\assets\images\maskin-valtra-driftstimmar.png" />
     <Content Include="Dist\assets\images\maskin-valtra-esales.png" />
+    <Content Include="Dist\assets\images\maskin-valtra-film.png" />
     <Content Include="Dist\assets\images\maskin-valtra-manual.png" />
     <Content Include="Dist\assets\images\maskin-serviceanlaggningar.png" />
+    <Content Include="Dist\assets\images\maskin-valtra-manualer-och-instruktioner.png" />
+    <Content Include="Dist\assets\images\maskin-valtra-service.png" />
     <Content Include="Dist\assets\images\maskin-valtra-t4.jpg" />
     <Content Include="Dist\assets\images\sprite%402x.png" />
     <Content Include="Dist\assets\images\sprite.png" />
@@ -183,6 +195,22 @@
     <Content Include="Src\Styles\_references.scss" />
     <Content Include="StyleTemplate\index.html" />
     <Content Include="Src\Styles\5_objects\_objects.dialog.scss" />
+    <Content Include="Dist\assets\fonts\AkzidenzGroteskBQ-Medium.eot" />
+    <Content Include="Dist\assets\fonts\AkzidenzGroteskBQ-Medium.ttf" />
+    <Content Include="Dist\assets\fonts\AkzidenzGroteskBQ-Medium.woff" />
+    <Content Include="Dist\assets\fonts\AkzidenzGroteskBQ-Medium.woff2" />
+    <Content Include="Dist\assets\fonts\AkzidenzGroteskBQ-Reg.eot" />
+    <Content Include="Dist\assets\fonts\AkzidenzGroteskBQ-Reg.ttf" />
+    <Content Include="Dist\assets\fonts\AkzidenzGroteskBQ-Reg.woff" />
+    <Content Include="Dist\assets\fonts\AkzidenzGroteskBQ-Reg.woff2" />
+    <Content Include="Dist\assets\fonts\clarendonurw-reg-webfont.eot" />
+    <Content Include="Dist\assets\fonts\clarendonurw-reg-webfont.ttf" />
+    <Content Include="Dist\assets\fonts\clarendonurw-reg-webfont.woff" />
+    <Content Include="Dist\assets\fonts\clarendonurw-reg-webfont.woff2" />
+    <Content Include="Dist\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Dist\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Dist\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Dist\assets\fonts\fontawesome-webfont.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -255,9 +283,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Dist\assets\fonts\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

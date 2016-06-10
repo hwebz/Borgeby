@@ -6,10 +6,53 @@
 
 
 
+@font-face {
+    font-family: "Akzident-Grotesk-BQ-Medium";
+    src: url("../../assets/fonts/AkzidenzGroteskBQ-Medium.eot");
+    src: url("../../assets/fonts/AkzidenzGroteskBQ-Medium.eot?#iefix") format("embedded-opentype"),
+         url("../../assets/fonts/AkzidenzGroteskBQ-Medium.woff2") format("woff2"),
+         url("../../assets/fonts/AkzidenzGroteskBQ-Medium.woff") format("woff"),
+         url("../../assets/fonts/AkzidenzGroteskBQ-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Akzident-Grotesk-BQ-Regular";
+    src: url("../../assets/fonts/AkzidenzGroteskBQ-Reg.eot");
+    src: url("../../assets/fonts/AkzidenzGroteskBQ-Reg.eot?#iefix") format("embedded-opentype"),
+         url("../../assets/fonts/AkzidenzGroteskBQ-Reg.woff2") format("woff2"),
+         url("../../assets/fonts/AkzidenzGroteskBQ-Reg.woff") format("woff"),
+         url("../../assets/fonts/AkzidenzGroteskBQ-Reg.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Clarendon-URW-Regular";
+    src: url("../../assets/fonts/clarendonurw-reg-webfont.eot");
+    src: url("../../assets/fonts/clarendonurw-reg-webfont.eot?#iefix") format("embedded-opentype"),
+         url("../../assets/fonts/clarendonurw-reg-webfont.woff2") format("woff2"),
+         url("../../assets/fonts/clarendonurw-reg-webfont.woff") format("woff"),
+         url("../../assets/fonts/clarendonurw-reg-webfont.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Font-Awesome";
+    src: url("../../assets/fonts/fontawesome-webfont.eot");
+    src: url("../../assets/fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"),
+         url("../../assets/fonts/fontawesome-webfont.woff2") format("woff2"),
+         url("../../assets/fonts/fontawesome-webfont.woff") format("woff"),
+         url("../../assets/fonts/fontawesome-webfont.ttf") format("truetype");
+}
+
+
+/// Project specific fonts
+$akzidenz-grotesk-bq-medium:        "Akzident-Grotesk-BQ-Medium";
+$akzidenz-grotesk-bq-regular:       "Akzident-Grotesk-BQ-Regular";
+$clarendon-urw-regular:             "Clarendon-URW-Regular";
+
+
 // System UI font family
 // http://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide
-$font-system-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$font-system-ui:                    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
 
 // Monospace font family, used for code tags
-$font-monospace: Inconsolata, Monaco, Consolas, "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+$font-monospace:                    Inconsolata, Monaco, Consolas, "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;

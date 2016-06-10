@@ -10,10 +10,13 @@
  * 1. Prevent touch delay on touch devices (https://adactio.com/journal/10019)
  */
 a {
+    font-family: $akzidenz-grotesk-bq-medium;
     color: $color-link;
     touch-action: manipulation; /* [1] */
+    text-decoration: none;
 
     @include pseudo-classes(false) {
         color: $color-link-hover;
+        text-decoration: underline;
     }
 }

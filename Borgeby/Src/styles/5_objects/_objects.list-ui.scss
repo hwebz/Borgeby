@@ -10,25 +10,26 @@
 
 
 // Padding
-$list-ui-padding:               $base-spacing-unit;
-$list-ui-padding--tiny:         quarter($list-ui-padding);
-$list-ui-padding--small:        halve($list-ui-padding);
-$list-ui-padding--large:        double($list-ui-padding);
-$list-ui-padding--huge:         quadruple($list-ui-padding);
+$list-ui-padding: $base-spacing-unit;
+$list-ui-padding--tiny: quarter($list-ui-padding);
+$list-ui-padding--small: halve($list-ui-padding);
+$list-ui-padding--large: double($list-ui-padding);
+$list-ui-padding--huge: quadruple($list-ui-padding);
 
 
 // Modifiers
-$enable-list-ui--tiny:          false;
-$enable-list-ui--small:         false;
-$enable-list-ui--large:         false;
-$enable-list-ui--huge:          false;
-$enable-list-ui--inner:         false;
+$enable-list-ui--tiny: false;
+$enable-list-ui--small: false;
+$enable-list-ui--large: true;
+$enable-list-ui--huge: false;
+$enable-list-ui--inner: true;
+$enable-list-ui--wide: true;
 
 
 // Settings
-$list-ui-border-width:          em(1px);
-$list-ui-border-style:          solid;
-$list-ui-border-color:          $color-gray-alto;
+$list-ui-border-width: em(1px);
+$list-ui-border-style: solid;
+$list-ui-border-color: $color-gray-alto;
 
 
 
@@ -75,7 +76,7 @@ $list-ui-border-color:          $color-gray-alto;
 
         > .list-ui__item,
         > %list-ui__item {
-            padding: 0 $list-ui-padding--small;
+            padding: $list-ui-padding--tiny;
         }
     }
 }
@@ -91,7 +92,7 @@ $list-ui-border-color:          $color-gray-alto;
 
         > .list-ui__item,
         > %list-ui__item {
-            padding: $list-ui-padding--tiny $list-ui-padding--small;
+            padding: $list-ui-padding--small;
         }
     }
 }
@@ -107,7 +108,7 @@ $list-ui-border-color:          $color-gray-alto;
 
         > .list-ui__item,
         > %list-ui__item {
-            padding: $list-ui-padding--small $list-ui-padding;
+            padding: $list-ui-padding--large;
         }
     }
 }
@@ -123,7 +124,7 @@ $list-ui-border-color:          $color-gray-alto;
 
         > .list-ui__item,
         > %list-ui__item {
-            padding: $list-ui-padding $list-ui-padding;
+            padding: $list-ui-padding--huge;
         }
     }
 }
@@ -141,6 +142,23 @@ $list-ui-border-color:          $color-gray-alto;
         > .list-ui__item:last-child,
         > %list-ui__item:last-child {
             border-bottom-width: 0;
+        }
+    }
+}
+
+
+
+@if ($enable-list-ui--wide == true) {
+    /**
+     * Remove left and right padding on list items
+     */
+    .list-ui--wide,
+    %list-ui--wide {
+
+        > .list-ui__item,
+        > %list-ui__item {
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 }

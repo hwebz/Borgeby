@@ -10,33 +10,33 @@
 // Palette
 $color-black:                       rgb(0, 0, 0);
 $color-white:                       rgb(255, 255, 255);
-$color-blue-curious:                rgb(22, 155, 213);
-$color-blue-chill:                  rgb(18, 120, 164);
+$color-green-vida-loca:             rgb(87, 166, 25);
 $color-gray-mine-shaft:             rgb(61, 61, 61);
-$color-gray-alto:                   rgb(222, 222, 222);
+$color-gray-tundora:                rgb(68, 68, 68);
+$color-gray-alto:                   rgb(220, 220, 220);
 $color-yellow-portafino:            rgb(255, 255, 173);
 
 $color-gray-desert-storm:           rgb(239, 238, 236);
 
 
 // Base
-$color-base-text:                   $color-black;
+$color-base-text:                   $color-gray-tundora;
 $color-base-background:             $color-gray-desert-storm;
 
 
 // Links
-$color-link:                        $color-blue-curious;
-$color-link-hover:                  $color-blue-chill;
-$color-link-outline:                $color-blue-curious;
+$color-link:                        $color-base-text;
+$color-link-hover:                  $color-base-text;
+$color-link-outline:                $color-green-vida-loca;
 
 
 // Buttons
 $color-btn-primary:                 $color-white;
-$color-btn-primary-background:      $color-blue-curious;
-$color-btn-primary-border:          $color-blue-curious;
+$color-btn-primary-background:      $color-green-vida-loca;
+$color-btn-primary-border:          $color-green-vida-loca;
 $color-btn-secondary:               $color-black;
-$color-btn-secondary-background:    $color-gray-alto;
-$color-btn-secondary-border:        $color-gray-alto;
+$color-btn-secondary-background:    $color-white;
+$color-btn-secondary-border:        $color-gray-tundora;
 
 
 // Typography
@@ -45,7 +45,7 @@ $color-hr:                          $color-gray-alto;
 
 
 // Code
-$color-code:                        $color-blue-curious;
+$color-code:                        $color-green-vida-loca;
 $color-code-background:             $color-gray-alto;
 $color-kbd:                         $color-white;
 $color-kbd-background:              $color-gray-mine-shaft;
