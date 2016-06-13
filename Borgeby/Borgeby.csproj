@@ -75,6 +75,7 @@
     <Content Include="Dist\assets\images\foder-produktkatalogen.png" />
     <Content Include="Dist\assets\images\header-favoriter.png" />
     <Content Include="Dist\assets\images\header-foder-icon.png" />
+    <Content Include="Dist\assets\images\header-odling-sidor.png" />
     <Content Include="Dist\assets\images\header-foder.png" />
     <Content Include="Dist\assets\images\header-kontakt.png" />
     <Content Include="Dist\assets\images\header-konto.png" />
@@ -84,6 +85,8 @@
     <Content Include="Dist\assets\images\header-maskin.png" />
     <Content Include="Dist\assets\images\header-meddelanden.png" />
     <Content Include="Dist\assets\images\header-meny.png" />
+    <Content Include="Dist\assets\images\header-odling-icon.png" />
+    <Content Include="Dist\assets\images\header-odling.png" />
     <Content Include="Dist\assets\images\header-valj-tjanst.png" />
     <Content Include="Dist\assets\images\kommande-tjanster.png" />
     <Content Include="Dist\assets\images\manual-icon-empty.png" />
@@ -105,6 +108,13 @@
     <Content Include="Dist\assets\images\maskin-service.png" />
     <Content Include="Dist\assets\images\maskin-valtra-t4-varning.png" />
     <Content Include="Dist\assets\images\maskin-valtra-t4.jpg" />
+    <Content Include="Dist\assets\images\odling-kommande-tjanster.png" />
+    <Content Include="Dist\assets\images\odling-produktkatalogen.png" />
+    <Content Include="Dist\assets\images\odling-sortguide-text.png" />
+    <Content Include="Dist\assets\images\odling-sortguide.png" />
+    <Content Include="Dist\assets\images\odling-utsadesodlare.png" />
+    <Content Include="Dist\assets\images\odling-vaxtline.png" />
+    <Content Include="Dist\assets\images\odling-vaxtrad.png" />
     <Content Include="Dist\assets\images\pdf.png" />
     <Content Include="Dist\assets\images\sprite%402x.png" />
     <Content Include="Dist\assets\images\sprite.png" />
