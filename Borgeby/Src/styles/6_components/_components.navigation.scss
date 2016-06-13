@@ -1,0 +1,65 @@
+﻿/// <reference path="../_references.scss" />
+
+// ------------------------------------------------------------------------- //
+// #NAVIGATION
+// ------------------------------------------------------------------------- //
+
+
+
+/**
+ * Navigation component
+ */
+.nav {
+    overflow: hidden;
+}
+
+.nav--primary {
+    background-color: $color-nav-primary-background;
+}
+
+.nav--secondary {
+    margin-bottom: $base-spacing-unit--large;
+    background-color: $color-nav-secondary-background;
+}
+
+
+
+.nav__list {
+    @extend %list-inline;
+    @extend %clearfix;
+    font-size: 0;
+}
+
+.nav__list--primary {
+    float: left;
+}
+
+.nav__list--secondary {
+    float: right;
+}
+
+
+
+.nav__image--primary {
+    height: 40px;
+
+    @include media-query("laptop") {
+        height: 55px;
+    }
+
+    @include media-query("desktop") {
+        height: 65px;
+    }
+}
+
+.nav__image--secondary {
+    height: 40px;
+
+    @include media-query("laptop") {
+        height: 50px;
+    }
+
+    @include media-query("desktop") {
+        height: 60px;
+    }
+}

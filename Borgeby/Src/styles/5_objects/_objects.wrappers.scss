@@ -11,7 +11,8 @@
  */
 .wrapper {
     width: $wrapper-width-mobile;
-    padding: $base-spacing-unit;
+    padding-right: $base-spacing-unit;
+    padding-left: $base-spacing-unit;
     margin-left: auto;
     margin-right: auto;
 
@@ -26,4 +27,10 @@
     @include media-query("desktop") {
         width: $wrapper-width-desktop;
     }
+}
+
+
+.wrapper--content {
+    padding-top: $base-spacing-unit--large;
+    padding-bottom: $base-spacing-unit--large;
 }

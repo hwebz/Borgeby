@@ -17,6 +17,7 @@ $color-gray-alto:                   rgb(220, 220, 220);
 $color-yellow-portafino:            rgb(255, 255, 173);
 
 $color-gray-desert-storm:           rgb(239, 238, 236);
+$color-beige-spring-wood:           rgb(252, 251, 249);
 
 
 // Base
@@ -77,11 +78,12 @@ $color-form-fieldset-border:        $color-gray-alto;
 
 
 // Page header
-$color-page-header-background:      $color-white;
+$color-page-header-background:      $color-beige-spring-wood;
 
 
 // Navigation
-$color-site-navigation:             $color-base-text;
+$color-nav-primary-background:      $color-beige-spring-wood;
+$color-nav-secondary-background:    $color-white;
 
 
 // Page footer
