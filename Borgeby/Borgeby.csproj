@@ -70,7 +70,12 @@
     <Content Include="Dist\assets\fonts\AkzidenzGroteskBQ-Reg.svg" />
     <Content Include="Dist\assets\fonts\clarendonurw-reg-webfont.svg" />
     <Content Include="Dist\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Dist\assets\images\foder-ehandel-lantbruk.png" />
+    <Content Include="Dist\assets\images\foder-foljesedlar.png" />
+    <Content Include="Dist\assets\images\foder-produktkatalogen.png" />
     <Content Include="Dist\assets\images\header-favoriter.png" />
+    <Content Include="Dist\assets\images\header-foder-icon.png" />
+    <Content Include="Dist\assets\images\header-foder.png" />
     <Content Include="Dist\assets\images\header-kontakt.png" />
     <Content Include="Dist\assets\images\header-konto.png" />
     <Content Include="Dist\assets\images\header-logo.png" />
@@ -80,6 +85,7 @@
     <Content Include="Dist\assets\images\header-meddelanden.png" />
     <Content Include="Dist\assets\images\header-meny.png" />
     <Content Include="Dist\assets\images\header-valj-tjanst.png" />
+    <Content Include="Dist\assets\images\kommande-tjanster.png" />
     <Content Include="Dist\assets\images\manual-icon-empty.png" />
     <Content Include="Dist\assets\images\maskin-bogballe-film.mp4" />
     <Content Include="Dist\assets\images\maskin-bogballe-m3w.jpg" />
