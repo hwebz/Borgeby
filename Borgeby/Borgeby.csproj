@@ -145,6 +145,7 @@
     <Content Include="Dist\assets\images\start-fronttermin.jpg" />
     <Content Include="Dist\assets\images\start-invagt.jpg" />
     <Content Include="Dist\assets\images\start-kommande-leveranser.jpg" />
+    <Content Include="Dist\assets\images\start-meddelanden-popup.png" />
     <Content Include="Dist\assets\images\start-meddelanden.jpg" />
     <Content Include="Dist\assets\images\start-menu-ekonomi.jpg" />
     <Content Include="Dist\assets\images\start-menu-foder.jpg" />
