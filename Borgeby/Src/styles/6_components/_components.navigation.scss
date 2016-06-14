@@ -17,6 +17,10 @@
 .nav--primary {
     margin-bottom: $base-spacing-unit--large;
     background-color: $color-nav-primary-background;
+
+    &.affix {
+        margin-bottom: $base-spacing-unit--huge;
+    }
 }
 
 .nav--secondary {

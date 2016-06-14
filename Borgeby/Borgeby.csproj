@@ -116,6 +116,7 @@
     <Content Include="Dist\assets\images\maskin-service.png" />
     <Content Include="Dist\assets\images\maskin-valtra-t4-varning.png" />
     <Content Include="Dist\assets\images\maskin-valtra-t4.jpg" />
+    <Content Include="Dist\assets\images\mina-installningar.jpg" />
     <Content Include="Dist\assets\images\odling-kommande-tjanster.png" />
     <Content Include="Dist\assets\images\odling-produktkatalogen.png" />
     <Content Include="Dist\assets\images\odling-sortguide-text.png" />
@@ -145,6 +146,7 @@
     <Content Include="Dist\assets\scripts\vendor\flickity.pkgd.min.js" />
     <Content Include="Dist\assets\styles\styles.css" />
     <Content Include="Dist\assets\styles\styles.min.css" />
+    <Content Include="Dist\mina-installningar.html" />
     <Content Include="Dist\foder-kommande-tjanster.html" />
     <Content Include="Dist\foder.html" />
     <Content Include="Dist\spannmal-mina-spannmalsavtal.html" />
