@@ -24,6 +24,8 @@
 }
 
 .nav--secondary {
+    margin-bottom: $base-spacing-unit--large;
+
     &.affix {
         position: fixed;
         top: 0;

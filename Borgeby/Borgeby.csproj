@@ -75,6 +75,7 @@
     <Content Include="Dist\assets\images\foder-produktkatalogen.png" />
     <Content Include="Dist\assets\images\header-favoriter.png" />
     <Content Include="Dist\assets\images\header-foder-icon.png" />
+    <Content Include="Dist\assets\images\header-mina-installningar.jpg" />
     <Content Include="Dist\assets\images\header-odling-sidor.png" />
     <Content Include="Dist\assets\images\header-foder.png" />
     <Content Include="Dist\assets\images\header-kontakt.png" />
@@ -116,6 +117,7 @@
     <Content Include="Dist\assets\images\maskin-service.png" />
     <Content Include="Dist\assets\images\maskin-valtra-t4-varning.png" />
     <Content Include="Dist\assets\images\maskin-valtra-t4.jpg" />
+    <Content Include="Dist\assets\images\mina-installningar-hanter-anvandare.jpg" />
     <Content Include="Dist\assets\images\mina-installningar.jpg" />
     <Content Include="Dist\assets\images\odling-kommande-tjanster.png" />
     <Content Include="Dist\assets\images\odling-produktkatalogen.png" />
@@ -146,6 +148,7 @@
     <Content Include="Dist\assets\scripts\vendor\flickity.pkgd.min.js" />
     <Content Include="Dist\assets\styles\styles.css" />
     <Content Include="Dist\assets\styles\styles.min.css" />
+    <Content Include="Dist\mina-installningar-hantera-anvandare.html" />
     <Content Include="Dist\mina-installningar.html" />
     <Content Include="Dist\foder-kommande-tjanster.html" />
     <Content Include="Dist\foder.html" />
