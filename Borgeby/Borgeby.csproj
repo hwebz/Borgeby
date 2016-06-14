@@ -81,7 +81,6 @@
     <Content Include="Dist\assets\images\header-konto.png" />
     <Content Include="Dist\assets\images\header-logo.png" />
     <Content Include="Dist\assets\images\header-maskin-icon.png" />
-    <Content Include="Dist\assets\images\header-maskin-sidor.png" />
     <Content Include="Dist\assets\images\header-maskin.png" />
     <Content Include="Dist\assets\images\header-meddelanden.png" />
     <Content Include="Dist\assets\images\header-meny.png" />
