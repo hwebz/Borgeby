@@ -10,15 +10,30 @@
  * Navigation component
  */
 .nav {
-    overflow: hidden;
+    @extend %clearfix;
+    position: relative;
 }
 
 .nav--primary {
+    margin-bottom: $base-spacing-unit--large;
     background-color: $color-nav-primary-background;
 }
 
 .nav--secondary {
-    margin-bottom: $base-spacing-unit--large;
+    &.affix {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        .nav--secondary-inner {
+            box-shadow: 0 0 1px $color-gray-silver;
+        }
+    }
+}
+
+.nav--secondary-inner {
+    overflow: hidden;
     background-color: $color-nav-secondary-background;
 }
 
@@ -61,5 +76,27 @@
 
     @include media-query("desktop") {
         height: 60px;
+    }
+}
+
+
+
+.nav__service-selector {
+    @include z-index("navigation");
+    position: absolute;
+    top: 55px;
+    left: 0;
+    display: none;
+    padding: 14px;
+    background-color: $color-beige-spring-wood;
+    box-shadow: 0 3px 3px $color-gray-silver;
+}
+
+
+.nav__image--service-selector {
+    display: none;
+
+    &.is-active {
+        display: inline-block;
     }
 }

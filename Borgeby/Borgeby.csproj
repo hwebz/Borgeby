@@ -90,6 +90,12 @@
     <Content Include="Dist\assets\images\header-spannmal-icon.png" />
     <Content Include="Dist\assets\images\header-spannmal-sidor.png" />
     <Content Include="Dist\assets\images\header-spannmal.png" />
+    <Content Include="Dist\assets\images\header-tjanst-ekonomi.png" />
+    <Content Include="Dist\assets\images\header-tjanst-foder.png" />
+    <Content Include="Dist\assets\images\header-tjanst-maskiner.png" />
+    <Content Include="Dist\assets\images\header-tjanst-odling.png" />
+    <Content Include="Dist\assets\images\header-tjanst-spannmal.png" />
+    <Content Include="Dist\assets\images\header-valj-tjanst-active.png" />
     <Content Include="Dist\assets\images\header-valj-tjanst.png" />
     <Content Include="Dist\assets\images\kommande-tjanster.png" />
     <Content Include="Dist\assets\images\manual-icon-empty.png" />
@@ -177,7 +183,9 @@
     <Content Include="Dist\assets\images\Favicon\manifest.json" />
     <Content Include="Src\Images\Icons\icon-minus-blue%402x.png" />
     <Content Include="Src\Images\Icons\icon-plus-blue%402x.png" />
+    <Content Include="Src\Scripts\modules\affix.js" />
     <Content Include="Src\Scripts\modules\dialog.js" />
+    <Content Include="Src\Scripts\modules\toggle.js" />
     <Content Include="Src\Styles\1_settings\_settings.colors.scss" />
     <Content Include="Src\Styles\1_settings\_settings.fonts.scss" />
     <Content Include="Src\Styles\1_settings\_settings.globals.scss" />

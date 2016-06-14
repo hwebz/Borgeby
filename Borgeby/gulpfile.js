@@ -482,6 +482,8 @@ plugins.gulp.task("scripts", function () {
             paths.scripts.src + "truncate.js",
             paths.scripts.src + "responsive-bg-image.js",
             paths.scripts.src + "dialog.js",
+            paths.scripts.src + "toggle.js",
+            paths.scripts.src + "affix.js",
         ],
 
         // Destination js file

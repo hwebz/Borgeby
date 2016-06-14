@@ -43,9 +43,27 @@
             <div class="nav  nav--primary">
                 <ul class="nav__list  nav__list--primary">
                     <li class="nav__item">
-                        <a href="">
-                            <img class="nav__image--primary" src="assets/images/header-valj-tjanst.png" alt="" />
+                        <a class="js-toggle" href="index.html" data-target="#service-selector">
+                            <img class="nav__image--primary  nav__image--service-selector  is-active" src="assets/images/header-valj-tjanst.png" alt="" />
+                            <img class="nav__image--primary  nav__image--service-selector" src="assets/images/header-valj-tjanst-active.png" alt="" />
                         </a>
+                        <div class="nav__service-selector" id="service-selector">
+                            <div class="box">
+                                <a href="spannmal.html">
+                                    <img src="assets/images/header-tjanst-spannmal.png" alt="" />
+                                </a>
+                                <a href="odling.html">
+                                    <img src="assets/images/header-tjanst-odling.png" alt="" />
+                                </a>
+                                <a href="foder.html">
+                                    <img src="assets/images/header-tjanst-foder.png" alt="" />
+                                </a>
+                                <img src="assets/images/header-tjanst-ekonomi.png" alt="" />
+                                <a href="maskin.html">
+                                    <img src="assets/images/header-tjanst-maskiner.png" alt="" />
+                                </a>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav__item">
                         <a href="index.html">
@@ -80,35 +98,39 @@
         </div>
     </header>
 
-    <div class="wrapper  wrapper--content">
+    <div class="nav  nav--secondary">
+        <div class="wrapper">
+            <div class="nav--secondary-inner">
+                <ul class="nav__list  nav__list--primary">
+                    <li class="nav__item">
+                        <a href="spannmal.html">
+                            <img class="nav__image--secondary" src="assets/images/header-spannmal-icon.png" alt="" />
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="spannmal.html">
+                            <img class="nav__image--secondary" src="assets/images/header-spannmal.png" alt="" />
+                        </a>
+                    </li>
+                </ul>
 
-        <div class="nav  nav--secondary">
-            <ul class="nav__list  nav__list--primary">
-                <li class="nav__item">
-                    <a href="spannmal.html">
-                        <img class="nav__image--secondary" src="assets/images/header-spannmal-icon.png" alt="" />
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="spannmal.html">
-                        <img class="nav__image--secondary" src="assets/images/header-spannmal.png" alt="" />
-                    </a>
-                </li>
-            </ul>
-
-            <ul class="nav__list  nav__list--secondary">
-                <li class="nav__item">
-                    <a href="">
-                        <img class="nav__image--secondary" src="assets/images/header-spannmal-sidor.png" alt="" />
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="">
-                        <img class="nav__image--secondary" src="assets/images/header-meny.png" alt="" />
-                    </a>
-                </li>
-            </ul>
+                <ul class="nav__list  nav__list--secondary">
+                    <li class="nav__item">
+                        <a href="">
+                            <img class="nav__image--secondary" src="assets/images/header-spannmal-sidor.png" alt="" />
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="">
+                            <img class="nav__image--secondary" src="assets/images/header-meny.png" alt="" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </div>
+
+    <div class="wrapper  wrapper--content">
 
         <main id="main" role="main">
 
