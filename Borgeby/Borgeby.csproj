@@ -163,6 +163,7 @@
     <Content Include="Dist\assets\scripts\vendor\flickity.pkgd.min.js" />
     <Content Include="Dist\assets\styles\styles.css" />
     <Content Include="Dist\assets\styles\styles.min.css" />
+    <Content Include="Dist\ekonomi.html" />
     <Content Include="Dist\mina-installningar-hantera-anvandare.html" />
     <Content Include="Dist\mina-installningar.html" />
     <Content Include="Dist\foder-kommande-tjanster.html" />
