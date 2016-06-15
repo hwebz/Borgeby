@@ -70,9 +70,16 @@
     <Content Include="Dist\assets\fonts\AkzidenzGroteskBQ-Reg.svg" />
     <Content Include="Dist\assets\fonts\clarendonurw-reg-webfont.svg" />
     <Content Include="Dist\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Dist\assets\images\ekonomi-kommande-tjanster-text.jpg" />
+    <Content Include="Dist\assets\images\ekonomi-kommande-tjanster.jpg" />
+    <Content Include="Dist\assets\images\ekonomi-kontobesked.jpg" />
+    <Content Include="Dist\assets\images\ekonomi-kontooversikt.jpg" />
+    <Content Include="Dist\assets\images\ekonomi-lankar.jpg" />
     <Content Include="Dist\assets\images\foder-ehandel-lantbruk.png" />
     <Content Include="Dist\assets\images\foder-foljesedlar.png" />
     <Content Include="Dist\assets\images\foder-produktkatalogen.png" />
+    <Content Include="Dist\assets\images\header-ekonomi-icon.jpg" />
+    <Content Include="Dist\assets\images\header-ekonomi.jpg" />
     <Content Include="Dist\assets\images\header-favoriter.png" />
     <Content Include="Dist\assets\images\header-foder-icon.png" />
     <Content Include="Dist\assets\images\header-mina-installningar.jpg" />
@@ -172,6 +179,7 @@
     <Content Include="Dist\assets\styles\styles.css" />
     <Content Include="Dist\assets\styles\styles.min.css" />
     <Content Include="Dist\ekonomi.html" />
+    <Content Include="Dist\ekonomi-kommande-tjanster.html" />
     <Content Include="Dist\mina-installningar-hantera-anvandare.html" />
     <Content Include="Dist\mina-installningar.html" />
     <Content Include="Dist\foder-kommande-tjanster.html" />
