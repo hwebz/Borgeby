@@ -79,6 +79,7 @@
     <Content Include="Dist\assets\images\foder-foljesedlar.png" />
     <Content Include="Dist\assets\images\foder-kommande-tjanster-text.jpg" />
     <Content Include="Dist\assets\images\foder-kommande-tjanster.jpg" />
+    <Content Include="Dist\assets\images\footer.jpg" />
     <Content Include="Dist\assets\images\header-ekonomi-icon.jpg" />
     <Content Include="Dist\assets\images\header-ekonomi.jpg" />
     <Content Include="Dist\assets\images\header-favoriter.png" />
@@ -104,6 +105,7 @@
     <Content Include="Dist\assets\images\header-valj-tjanst.png" />
     <Content Include="Dist\assets\images\kommande-tjanster.png" />
     <Content Include="Dist\assets\images\manual-icon-empty.png" />
+    <Content Include="Dist\assets\images\start-hero.jpg" />
     <Content Include="Dist\assets\movies\maskin-bogballe-film.mp4" />
     <Content Include="Dist\assets\images\maskin-bogballe-godselspridare.png" />
     <Content Include="Dist\assets\images\maskin-bogballe-m3w.jpg" />
