@@ -97,8 +97,14 @@
     <Content Include="Dist\assets\images\kommande-tjanster.png" />
     <Content Include="Dist\assets\images\manual-icon-empty.png" />
     <Content Include="Dist\assets\images\maskin-bogballe-film.mp4" />
+    <Content Include="Dist\assets\images\maskin-bogballe-godselspridare.png" />
     <Content Include="Dist\assets\images\maskin-bogballe-m3w.jpg" />
     <Content Include="Dist\assets\images\maskin-bogballe-spridartabell.jpg" />
+    <Content Include="Dist\assets\images\maskin-bogballe-spridartabell.png" />
+    <Content Include="Dist\assets\images\maskin-hitta-serveranlaggning.png" />
+    <Content Include="Dist\assets\images\maskin-kop-reservdel.png" />
+    <Content Include="Dist\assets\images\maskin-vaderstad-manual.png" />
+    <Content Include="Dist\assets\images\maskin-valtra-manual.png" />
     <Content Include="Dist\assets\images\maskin-valtra-serviceanläggning.png" />
     <Content Include="Dist\assets\images\maskin-valtra-t4-varning-bottom.jpg" />
     <Content Include="Dist\assets\images\maskin-valtra-t4-varning-detaljer.png" />
