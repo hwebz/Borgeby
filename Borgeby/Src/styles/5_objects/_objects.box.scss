@@ -46,6 +46,7 @@ $box-border-round: 0;
     @extend %clearfix;
     display: block; /* [1] */
     padding: $box-padding;
+    background-color: $color-white;
 
     > :last-child {
         margin-bottom: 0;

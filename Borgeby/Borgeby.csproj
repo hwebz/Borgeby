@@ -105,6 +105,8 @@
     <Content Include="Dist\assets\images\header-valj-tjanst.png" />
     <Content Include="Dist\assets\images\kommande-tjanster.png" />
     <Content Include="Dist\assets\images\manual-icon-empty.png" />
+    <Content Include="Dist\assets\images\maskin-bogballe-film.jpg" />
+    <Content Include="Dist\assets\images\maskin-valtra-film.jpg" />
     <Content Include="Dist\assets\images\start-hero.jpg" />
     <Content Include="Dist\assets\images\start-meddelande-popup-foder.png" />
     <Content Include="Dist\assets\images\start-meddelande-popup-spannmal.png" />
@@ -130,7 +132,6 @@
     <Content Include="Dist\assets\images\maskin-vaderstad.jpg" />
     <Content Include="Dist\assets\images\maskin-valtra-driftstimmar.png" />
     <Content Include="Dist\assets\images\maskin-valtra-esales.png" />
-    <Content Include="Dist\assets\images\maskin-valtra-film.png" />
     <Content Include="Dist\assets\images\maskin-manualer-och-instruktioner.png" />
     <Content Include="Dist\assets\images\maskin-service.png" />
     <Content Include="Dist\assets\images\maskin-valtra-t4-varning.png" />
