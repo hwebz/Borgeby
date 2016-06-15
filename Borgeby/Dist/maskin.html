@@ -130,11 +130,11 @@
                         <div class="block__img">
                             <img src="assets/images/maskin-valtra-t4-varning.png" alt="" style="cursor: pointer; outline: 0;" onclick="var varning = document.getElementById('maskin-varning'); var varningDetaljer = document.getElementById('maskin-varning-detaljer'); if (varning.style.display === 'block') { varning.style.display = 'none'; varningDetaljer.style.display = 'block'; } else { varningDetaljer.style.display = 'none'; varning.style.display = 'block'; }" />
 
-                            <a id="maskin-varning" href="maskin-valtra.html">
+                            <a id="maskin-varning" href="maskin-valtra.html" style="display: block; outline: 0;">
                                 <img src="assets/images/maskin-valtra-t4-varning-bottom.jpg" alt="" />
                             </a>
 
-                            <a class="js-dialog" id="maskin-varning-detaljer" href="maskin-valtra.html" target="_blank" data-dialog="esales-valtra-dialog" style="display: none; outline: 0;">
+                            <a class="js-dialog" id="maskin-varning-detaljer" href="maskin-valtra.html" target="_blank" data-dialog="esales-valtra-dialog" style="display: none; outline: 0;" onclick="var varning = document.getElementById('maskin-varning'); this.style.display = 'none'; varning.style.display = 'block';">
                                 <img src="assets/images/maskin-valtra-t4-varning-detaljer.png" alt="" />
                             </a>
                         </div>
