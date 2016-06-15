@@ -106,6 +106,10 @@
     <Content Include="Dist\assets\images\kommande-tjanster.png" />
     <Content Include="Dist\assets\images\manual-icon-empty.png" />
     <Content Include="Dist\assets\images\start-hero.jpg" />
+    <Content Include="Dist\assets\images\start-meddelande-popup-foder.png" />
+    <Content Include="Dist\assets\images\start-meddelande-popup-spannmal.png" />
+    <Content Include="Dist\assets\images\start-meddelanden-bottom.jpg" />
+    <Content Include="Dist\assets\images\start-meddelanden-top.jpg" />
     <Content Include="Dist\assets\movies\maskin-bogballe-film.mp4" />
     <Content Include="Dist\assets\images\maskin-bogballe-godselspridare.png" />
     <Content Include="Dist\assets\images\maskin-bogballe-m3w.jpg" />
@@ -167,8 +171,6 @@
     <Content Include="Dist\assets\images\start-graf-matif.jpg" />
     <Content Include="Dist\assets\images\start-invagt.jpg" />
     <Content Include="Dist\assets\images\start-kommande-leveranser.jpg" />
-    <Content Include="Dist\assets\images\start-meddelanden-popup.png" />
-    <Content Include="Dist\assets\images\start-meddelanden.jpg" />
     <Content Include="Dist\assets\images\start-menu-ekonomi.jpg" />
     <Content Include="Dist\assets\images\start-menu-foder.jpg" />
     <Content Include="Dist\assets\images\start-menu-maskiner.jpg" />

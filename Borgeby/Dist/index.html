@@ -76,19 +76,13 @@
 
                 <ul class="nav__list  nav__list--secondary">
                     <li class="nav__item">
-                        <a href="">
-                            <img class="nav__image--primary" src="assets/images/header-kontakt.png" alt="" />
-                        </a>
+                        <img class="nav__image--primary" src="assets/images/header-kontakt.png" alt="" />
                     </li>
                     <li class="nav__item">
-                        <a href="">
-                            <img class="nav__image--primary" src="assets/images/header-favoriter.png" alt="" />
-                        </a>
+                        <img class="nav__image--primary" src="assets/images/header-favoriter.png" alt="" />
                     </li>
                     <li class="nav__item">
-                        <a href="">
-                            <img class="nav__image--primary" src="assets/images/header-meddelanden.png" alt="" />
-                        </a>
+                        <img class="nav__image--primary" src="assets/images/header-meddelanden.png" alt="" />
                     </li>
                     <li class="nav__item">
                         <a href="mina-installningar.html">
@@ -173,8 +167,11 @@
                         <img src="assets/images/start-borgeby.jpg" alt="" style="margin-bottom: 2em;" />
                     </div>
                     <div class="box  box--flush">
-                        <a class="js-dialog" href="index.html" target="_blank" data-dialog="messages-dialog">
-                            <img src="assets/images/start-meddelanden.jpg" alt="" />
+                        <a class="js-dialog" href="index.html" target="_blank" data-dialog="message1-dialog">
+                            <img src="assets/images/start-meddelanden-top.jpg" alt=""/>
+                        </a>
+                        <a class="js-dialog" href="index.html" target="_blank" data-dialog="message2-dialog">
+                            <img src="assets/images/start-meddelanden-bottom.jpg" alt="" />
                         </a>
                     </div>
                 </div>
@@ -204,11 +201,21 @@
         </div>
     </footer>
 
-    <div class="dialog  dialog--flush" aria-hidden="true" id="messages-dialog">
+    <div class="dialog  dialog--flush" aria-hidden="true" id="message1-dialog">
         <div class="dialog__overlay" tabindex="-1" data-a11y-dialog-hide></div>
         <div class="dialog__content" aria-label="Meddelanden" role="dialog">
             <div role="document">
-                <img src="assets/images/start-meddelanden-popup.png" alt="" />
+                <img src="assets/images/start-meddelande-popup-foder.png" alt="" />
+                <button class="dialog__close" data-a11y-dialog-hide title="Stäng fönstret">&times;</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="dialog  dialog--flush" aria-hidden="true" id="message2-dialog">
+        <div class="dialog__overlay" tabindex="-1" data-a11y-dialog-hide></div>
+        <div class="dialog__content" aria-label="Meddelanden" role="dialog">
+            <div role="document">
+                <img src="assets/images/start-meddelande-popup-spannmal.png" alt="" />
                 <button class="dialog__close" data-a11y-dialog-hide title="Stäng fönstret">&times;</button>
             </div>
         </div>
