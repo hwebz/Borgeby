@@ -146,6 +146,7 @@
     <Content Include="Dist\assets\images\spannmal-finansiell-konto.png" />
     <Content Include="Dist\assets\images\spannmal-finansiell-marknad.png" />
     <Content Include="Dist\assets\images\spannmal-finansiell-spannmalshandel.png" />
+    <Content Include="Dist\assets\images\spannmal-finansiell-start.png" />
     <Content Include="Dist\assets\images\spannmal-lamna-spannmal.png" />
     <Content Include="Dist\assets\images\spannmal-marknadsinformation.png" />
     <Content Include="Dist\assets\images\spannmal-mina-avtal.png" />
