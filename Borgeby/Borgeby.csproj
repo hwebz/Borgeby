@@ -142,6 +142,9 @@
     <Content Include="Dist\assets\images\odling-vaxtrad.png" />
     <Content Include="Dist\assets\images\pdf.png" />
     <Content Include="Dist\assets\images\spannmal-blanketter-villkor.png" />
+    <Content Include="Dist\assets\images\spannmal-finansiell-handel.png" />
+    <Content Include="Dist\assets\images\spannmal-finansiell-konto.png" />
+    <Content Include="Dist\assets\images\spannmal-finansiell-marknad.png" />
     <Content Include="Dist\assets\images\spannmal-finansiell-spannmalshandel.png" />
     <Content Include="Dist\assets\images\spannmal-lamna-spannmal.png" />
     <Content Include="Dist\assets\images\spannmal-marknadsinformation.png" />
@@ -186,6 +189,7 @@
     <Content Include="Dist\mina-installningar.html" />
     <Content Include="Dist\foder-kommande-tjanster.html" />
     <Content Include="Dist\foder.html" />
+    <Content Include="Dist\spannmal-finansiell-spannmalshandel.html" />
     <Content Include="Dist\spannmal-mina-spannmalsavtal.html" />
     <Content Include="Dist\spannmal.html" />
     <Content Include="Dist\odling-kommande-tjanster.html" />
