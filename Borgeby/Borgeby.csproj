@@ -76,7 +76,6 @@
     <Content Include="Dist\assets\images\header-favoriter.png" />
     <Content Include="Dist\assets\images\header-foder-icon.png" />
     <Content Include="Dist\assets\images\header-mina-installningar.jpg" />
-    <Content Include="Dist\assets\images\header-odling-sidor.png" />
     <Content Include="Dist\assets\images\header-foder.png" />
     <Content Include="Dist\assets\images\header-kontakt.png" />
     <Content Include="Dist\assets\images\header-konto.png" />
@@ -84,11 +83,9 @@
     <Content Include="Dist\assets\images\header-maskin-icon.png" />
     <Content Include="Dist\assets\images\header-maskin.png" />
     <Content Include="Dist\assets\images\header-meddelanden.png" />
-    <Content Include="Dist\assets\images\header-meny.png" />
     <Content Include="Dist\assets\images\header-odling-icon.png" />
     <Content Include="Dist\assets\images\header-odling.png" />
     <Content Include="Dist\assets\images\header-spannmal-icon.png" />
-    <Content Include="Dist\assets\images\header-spannmal-sidor.png" />
     <Content Include="Dist\assets\images\header-spannmal.png" />
     <Content Include="Dist\assets\images\header-tjanst-ekonomi.png" />
     <Content Include="Dist\assets\images\header-tjanst-foder.png" />
@@ -143,7 +140,10 @@
     <Content Include="Dist\assets\images\maskin-valtra-film.mp4" />
     <Content Include="Dist\assets\images\start-borgeby.jpg" />
     <Content Include="Dist\assets\images\start-foderavtal.jpg" />
-    <Content Include="Dist\assets\images\start-fronttermin.jpg" />
+    <Content Include="Dist\assets\images\start-graf-cbot-selector.jpg" />
+    <Content Include="Dist\assets\images\start-graf-cbot.jpg" />
+    <Content Include="Dist\assets\images\start-graf-matif-selector.jpg" />
+    <Content Include="Dist\assets\images\start-graf-matif.jpg" />
     <Content Include="Dist\assets\images\start-invagt.jpg" />
     <Content Include="Dist\assets\images\start-kommande-leveranser.jpg" />
     <Content Include="Dist\assets\images\start-meddelanden-popup.png" />
