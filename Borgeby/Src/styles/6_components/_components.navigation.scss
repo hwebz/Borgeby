@@ -94,12 +94,20 @@
 .nav__service-selector {
     @include z-index("navigation");
     position: absolute;
-    top: 55px;
+    top: 40px;
     left: 0;
     display: none;
     padding: 14px;
     background-color: $color-beige-spring-wood;
     box-shadow: 0 3px 3px $color-gray-silver;
+
+    @include media-query("laptop") {
+        top: 55px;
+    }
+
+    @include media-query("desktop") {
+        top: 65px;
+    }
 }
 
 
