@@ -104,7 +104,7 @@
     <Content Include="Dist\assets\images\header-valj-tjanst.png" />
     <Content Include="Dist\assets\images\kommande-tjanster.png" />
     <Content Include="Dist\assets\images\manual-icon-empty.png" />
-    <Content Include="Dist\assets\images\maskin-bogballe-film.mp4" />
+    <Content Include="Dist\assets\movies\maskin-bogballe-film.mp4" />
     <Content Include="Dist\assets\images\maskin-bogballe-godselspridare.png" />
     <Content Include="Dist\assets\images\maskin-bogballe-m3w.jpg" />
     <Content Include="Dist\assets\images\maskin-bogballe-spridartabell.jpg" />
@@ -156,7 +156,7 @@
     <Content Include="Dist\assets\images\spannmal-teckna-avtal.png" />
     <Content Include="Dist\assets\images\sprite%402x.png" />
     <Content Include="Dist\assets\images\sprite.png" />
-    <Content Include="Dist\assets\images\maskin-valtra-film.mp4" />
+    <Content Include="Dist\assets\movies\maskin-valtra-film.mp4" />
     <Content Include="Dist\assets\images\start-borgeby.jpg" />
     <Content Include="Dist\assets\images\start-foderavtal.jpg" />
     <Content Include="Dist\assets\images\start-graf-cbot-selector.jpg" />
@@ -304,9 +304,9 @@
     <Content Include="Dist\assets\fonts\fontawesome-webfont.ttf" />
     <Content Include="Dist\assets\fonts\fontawesome-webfont.woff" />
     <Content Include="Dist\assets\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Dist\assets\images\maskin-valtra-manual.pdf" />
-    <Content Include="Dist\assets\images\maskin-bogballe-manual.pdf" />
-    <Content Include="Dist\assets\images\maskin-vaderstad-manual.pdf" />
+    <Content Include="Dist\assets\pdf\maskin-valtra-manual.pdf" />
+    <Content Include="Dist\assets\pdf\maskin-bogballe-manual.pdf" />
+    <Content Include="Dist\assets\pdf\maskin-vaderstad-manual.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
