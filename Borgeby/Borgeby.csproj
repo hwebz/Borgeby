@@ -76,6 +76,7 @@
     <Content Include="Dist\assets\images\ekonomi-kontooversikt.jpg" />
     <Content Include="Dist\assets\images\ekonomi-lankar.jpg" />
     <Content Include="Dist\assets\images\foder-ehandel-lantbruk.png" />
+    <Content Include="Dist\assets\images\foder-ehandel.png" />
     <Content Include="Dist\assets\images\foder-foljesedlar.png" />
     <Content Include="Dist\assets\images\foder-kommande-tjanster-text.jpg" />
     <Content Include="Dist\assets\images\foder-kommande-tjanster.jpg" />
