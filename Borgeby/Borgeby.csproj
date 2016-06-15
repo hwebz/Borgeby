@@ -100,6 +100,7 @@
     <Content Include="Dist\assets\images\maskin-bogballe-m3w.jpg" />
     <Content Include="Dist\assets\images\maskin-bogballe-spridartabell.jpg" />
     <Content Include="Dist\assets\images\maskin-valtra-serviceanläggning.png" />
+    <Content Include="Dist\assets\images\maskin-valtra-t4-varning-bottom.jpg" />
     <Content Include="Dist\assets\images\maskin-valtra-t4-varning-detaljer.png" />
     <Content Include="Dist\assets\images\maskin-lagg-till-popup.png" />
     <Content Include="Dist\assets\images\maskin-lagg-till.png" />
