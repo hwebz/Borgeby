@@ -125,8 +125,8 @@
     <Content Include="Dist\assets\images\maskin-vaderstad-manual.png" />
     <Content Include="Dist\assets\images\maskin-valtra-manual.png" />
     <Content Include="Dist\assets\images\maskin-valtra-serviceanläggning.png" />
-    <Content Include="Dist\assets\images\maskin-valtra-t4-varning-bottom.jpg" />
-    <Content Include="Dist\assets\images\maskin-valtra-t4-varning-detaljer.png" />
+    <Content Include="Dist\assets\images\maskin-valtra-varning-bottom.jpg" />
+    <Content Include="Dist\assets\images\maskin-valtra-varning-detaljer.png" />
     <Content Include="Dist\assets\images\maskin-lagg-till-popup.png" />
     <Content Include="Dist\assets\images\maskin-lagg-till.png" />
     <Content Include="Dist\assets\images\maskin-relaterade-tjanster.png" />
@@ -137,8 +137,8 @@
     <Content Include="Dist\assets\images\maskin-valtra-esales.png" />
     <Content Include="Dist\assets\images\maskin-manualer-och-instruktioner.png" />
     <Content Include="Dist\assets\images\maskin-service.png" />
-    <Content Include="Dist\assets\images\maskin-valtra-t4-varning.png" />
-    <Content Include="Dist\assets\images\maskin-valtra-t4.jpg" />
+    <Content Include="Dist\assets\images\maskin-valtra-varning.png" />
+    <Content Include="Dist\assets\images\maskin-valtra.jpg" />
     <Content Include="Dist\assets\images\mina-installningar-hantera-anvandare.jpg" />
     <Content Include="Dist\assets\images\mina-installningar.jpg" />
     <Content Include="Dist\assets\images\odling-eko-text.jpg" />
@@ -154,7 +154,6 @@
     <Content Include="Dist\assets\images\spannmal-finansiell-handel.png" />
     <Content Include="Dist\assets\images\spannmal-finansiell-konto.png" />
     <Content Include="Dist\assets\images\spannmal-finansiell-marknad.png" />
-    <Content Include="Dist\assets\images\spannmal-finansiell-spannmalshandel.png" />
     <Content Include="Dist\assets\images\spannmal-finansiell-start.png" />
     <Content Include="Dist\assets\images\spannmal-lamna-spannmal.png" />
     <Content Include="Dist\assets\images\spannmal-marknadsinformation.png" />
