@@ -113,6 +113,7 @@
     <Content Include="Dist\assets\images\start-meddelande-popup-spannmal.png" />
     <Content Include="Dist\assets\images\start-meddelanden-bottom.jpg" />
     <Content Include="Dist\assets\images\start-meddelanden-top.jpg" />
+    <Content Include="Dist\assets\images\start-screen.jpg" />
     <Content Include="Dist\assets\movies\maskin-bogballe-film.mp4" />
     <Content Include="Dist\assets\images\maskin-bogballe-godselspridare.png" />
     <Content Include="Dist\assets\images\maskin-bogballe-m3w.jpg" />
@@ -228,7 +229,6 @@
     <Content Include="Documentation\Frontend\Styles\readme.md" />
     <Content Include="Documentation\readme.md" />
     <Content Include="package.json" />
-    <Content Include="Dist\assets\images\demo.jpg" />
     <Content Include="Dist\assets\images\Favicon\manifest.json" />
     <Content Include="Src\Images\Icons\icon-minus-blue%402x.png" />
     <Content Include="Src\Images\Icons\icon-plus-blue%402x.png" />
