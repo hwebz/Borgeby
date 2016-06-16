@@ -70,6 +70,7 @@
     <Content Include="Dist\assets\fonts\AkzidenzGroteskBQ-Reg.svg" />
     <Content Include="Dist\assets\fonts\clarendonurw-reg-webfont.svg" />
     <Content Include="Dist\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Dist\assets\images\close.png" />
     <Content Include="Dist\assets\images\ekonomi-kommande-tjanster-text.jpg" />
     <Content Include="Dist\assets\images\ekonomi-kommande-tjanster.jpg" />
     <Content Include="Dist\assets\images\ekonomi-kontobesked.jpg" />

@@ -63,8 +63,8 @@ $enable-dialog--wide: true;
 .dialog__close {
     @include font-size(22px, "none");
     position: absolute;
-    top: $base-spacing-unit--small;
-    right: $base-spacing-unit--small;
+    top: -22px;
+    right: -25px;
     font-weight: bold;
     text-align: center;
     background-color: transparent;
