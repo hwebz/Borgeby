@@ -128,7 +128,7 @@
                                 <img src="assets/images/maskin-valtra-t4-varning-bottom.jpg" alt="" />
                             </a>
 
-                            <a class="js-dialog" id="maskin-varning-detaljer" href="maskin-valtra.html" target="_blank" data-dialog="esales-valtra-dialog" style="display: none; outline: 0;" onclick="var varning = document.getElementById('maskin-varning'); this.style.display = 'none'; varning.style.display = 'block';">
+                            <a class="js-dialog" id="maskin-varning-detaljer" href="maskin-valtra.html" target="_blank" data-dialog="service-dialog" style="display: none; outline: 0;" onclick="var varning = document.getElementById('maskin-varning'); this.style.display = 'none'; varning.style.display = 'block';">
                                 <img src="assets/images/maskin-valtra-t4-varning-detaljer.png" alt="" />
                             </a>
                         </div>
@@ -245,6 +245,16 @@
             <div role="document">
                 <img src="assets/images/maskin-lagg-till-popup.png" alt="" />
                 <button class="dialog__close" title="Stäng fönstret" data-a11y-dialog-hide>&times;</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="dialog  dialog--flush" aria-hidden="true" id="service-dialog">
+        <div class="dialog__overlay" tabindex="-1" data-a11y-dialog-hide></div>
+        <div class="dialog__content" aria-label="Hitta serviceanläggning" role="dialog">
+            <div role="document">
+                <img src="assets/images/maskin-valtra-serviceanläggning.png" alt="" />
+                <button class="dialog__close" data-a11y-dialog-hide title="Stäng fönstret">&times;</button>
             </div>
         </div>
     </div>
