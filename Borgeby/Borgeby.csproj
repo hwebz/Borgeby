@@ -104,10 +104,10 @@
     <Content Include="Dist\assets\images\header-tjanst-spannmal.png" />
     <Content Include="Dist\assets\images\header-valj-tjanst-active.png" />
     <Content Include="Dist\assets\images\header-valj-tjanst.png" />
-    <Content Include="Dist\assets\images\kommande-tjanster.png" />
     <Content Include="Dist\assets\images\manual-icon-empty.png" />
     <Content Include="Dist\assets\images\maskin-bogballe-film.jpg" />
     <Content Include="Dist\assets\images\maskin-valtra-film.jpg" />
+    <Content Include="Dist\assets\images\odling-kommande-tjanster-text.png" />
     <Content Include="Dist\assets\images\start-hero.jpg" />
     <Content Include="Dist\assets\images\start-meddelande-popup-foder.png" />
     <Content Include="Dist\assets\images\start-meddelande-popup-spannmal.png" />
@@ -137,7 +137,7 @@
     <Content Include="Dist\assets\images\maskin-service.png" />
     <Content Include="Dist\assets\images\maskin-valtra-t4-varning.png" />
     <Content Include="Dist\assets\images\maskin-valtra-t4.jpg" />
-    <Content Include="Dist\assets\images\mina-installningar-hanter-anvandare.jpg" />
+    <Content Include="Dist\assets\images\mina-installningar-hantera-anvandare.jpg" />
     <Content Include="Dist\assets\images\mina-installningar.jpg" />
     <Content Include="Dist\assets\images\odling-eko-text.jpg" />
     <Content Include="Dist\assets\images\odling-eko.jpg" />
