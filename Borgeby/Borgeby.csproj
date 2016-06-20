@@ -108,7 +108,6 @@
     <Content Include="Dist\assets\images\manual-icon-empty.png" />
     <Content Include="Dist\assets\images\maskin-bogballe-film.jpg" />
     <Content Include="Dist\assets\images\maskin-valtra-film.jpg" />
-    <Content Include="Dist\assets\images\odling-kommande-tjanster-text.png" />
     <Content Include="Dist\assets\images\start-hero.jpg" />
     <Content Include="Dist\assets\images\start-meddelande-popup-foder.png" />
     <Content Include="Dist\assets\images\start-meddelande-popup-spannmal.png" />
@@ -171,7 +170,6 @@
     <Content Include="Dist\assets\images\start-graf-cbot-selector.jpg" />
     <Content Include="Dist\assets\images\start-graf-cbot.jpg" />
     <Content Include="Dist\assets\images\start-graf-matif-selector.jpg" />
-    <Content Include="Dist\assets\images\start-graf-matif.jpg" />
     <Content Include="Dist\assets\images\start-invagt.jpg" />
     <Content Include="Dist\assets\images\start-kommande-leveranser.jpg" />
     <Content Include="Dist\assets\images\start-menu-ekonomi.jpg" />
